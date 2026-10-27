@@ -5,7 +5,7 @@
 Open Terminal and run the following, then refresh the site:
 
 ```
-cd ~/"Local Sites"/deeprose-carter/app/public/wp-content/themes/deeprose-carter
+cd ~/"Local Sites"/deeprose-carter-developments/app/public/wp-content/themes/deeprose-carter
 git pull
 ```
 
