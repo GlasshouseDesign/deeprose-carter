@@ -1,0 +1,41 @@
+{
+  "key": "group_dc_service",
+  "title": "Service details",
+  "fields": [
+    {
+      "key": "field_dc_srv_summary",
+      "label": "Card summary",
+      "name": "summary",
+      "type": "textarea",
+      "instructions": "One sentence for the service tiles. The tile photo is the featured image.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "new_lines": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "service"
+      }
+    ]
+  ],
+  "menu_order": -1,
+  "position": "side",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1793130705
+}

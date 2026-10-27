@@ -1,0 +1,1 @@
+<svg class="roof" viewBox="0 0 220 70" aria-hidden="true"><polyline points="4,66 110,6 216,66" fill="none" stroke="#F4F1EB" stroke-width="3"/><g fill="#F4F1EB"><rect x="100" y="36" width="9" height="9"/><rect x="111" y="36" width="9" height="9"/><rect x="100" y="47" width="9" height="9"/><rect x="111" y="47" width="9" height="9"/></g></svg>

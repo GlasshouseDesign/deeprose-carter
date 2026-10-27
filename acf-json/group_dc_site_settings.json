@@ -1,0 +1,286 @@
+{
+  "key": "group_dc_site_settings",
+  "title": "Site Settings",
+  "fields": [
+    {
+      "key": "field_dc_set_tab_contact",
+      "label": "Contact",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_dc_set_phone",
+      "label": "Phone number",
+      "name": "phone",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "01249 000 000"
+    },
+    {
+      "key": "field_dc_set_quote_email",
+      "label": "Quote email",
+      "name": "quote_email",
+      "type": "email",
+      "instructions": "Quote buttons with no link set email this address.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_dc_set_whatsapp",
+      "label": "WhatsApp number",
+      "name": "whatsapp",
+      "type": "text",
+      "instructions": "International format without spaces, for example 447700900000.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_dc_set_email",
+      "label": "Public email",
+      "name": "email",
+      "type": "email",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_dc_set_address",
+      "label": "Address",
+      "name": "address",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "new_lines": ""
+    },
+    {
+      "key": "field_dc_set_tab_header",
+      "label": "Header",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_dc_set_header_button",
+      "label": "Header button",
+      "name": "header_button",
+      "type": "link",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "array"
+    },
+    {
+      "key": "field_dc_set_tab_footer",
+      "label": "Footer",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_dc_set_strapline",
+      "label": "Strapline",
+      "name": "strapline",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Built around you"
+    },
+    {
+      "key": "field_dc_set_footer_text",
+      "label": "Footer text",
+      "name": "footer_text",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "new_lines": ""
+    },
+    {
+      "key": "field_dc_set_social",
+      "label": "Social links",
+      "name": "social",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "sub_fields": [
+        {
+          "key": "field_dc_set_social_label",
+          "label": "Label",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "40",
+            "class": "",
+            "id": ""
+          }
+        },
+        {
+          "key": "field_dc_set_social_url",
+          "label": "Link",
+          "name": "url",
+          "type": "url",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "60",
+            "class": "",
+            "id": ""
+          }
+        }
+      ],
+      "layout": "table",
+      "button_label": "Add link",
+      "min": 0,
+      "max": 0,
+      "collapsed": ""
+    },
+    {
+      "key": "field_dc_set_company",
+      "label": "Company details",
+      "name": "company_details",
+      "type": "text",
+      "instructions": "Shown in the footer, for example the company number.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_dc_set_tab_fonts",
+      "label": "Fonts",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_dc_set_fonts_kit",
+      "label": "Adobe Fonts project ID",
+      "name": "fonts_kit",
+      "type": "text",
+      "instructions": "The web project ID from fonts.adobe.com containing Trajan Pro 3 and Raleway.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "jtl2yxi"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "options_page",
+        "operator": "==",
+        "value": "dc-site-settings"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1793130705
+}

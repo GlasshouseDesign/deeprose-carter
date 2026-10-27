@@ -1,0 +1,1381 @@
+{
+  "key": "group_dc_page_sections",
+  "title": "Page sections",
+  "fields": [
+    {
+      "key": "field_dc_sections",
+      "label": "Sections",
+      "name": "page_sections",
+      "type": "flexible_content",
+      "instructions": "Build the page from sections. Drag to reorder.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layouts": {
+        "layout_dc_hero": {
+          "key": "layout_dc_hero",
+          "name": "hero_film",
+          "label": "Hero film",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_hero_webm",
+              "label": "Hero video (WebM)",
+              "name": "video_webm",
+              "type": "file",
+              "instructions": "Short silent loop, about 15 to 25 seconds.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "id",
+              "library": "all",
+              "mime_types": "webm"
+            },
+            {
+              "key": "field_dc_hero_mp4",
+              "label": "Hero video (MP4)",
+              "name": "video_mp4",
+              "type": "file",
+              "instructions": "The same loop as MP4, for Safari.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "id",
+              "library": "all",
+              "mime_types": "mp4"
+            },
+            {
+              "key": "field_dc_hero_poster",
+              "label": "Poster image",
+              "name": "poster",
+              "type": "image",
+              "instructions": "Shown while the video loads.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "id",
+              "preview_size": "medium",
+              "library": "all"
+            },
+            {
+              "key": "field_dc_hero_label",
+              "label": "Label on film",
+              "name": "film_label",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Recent work · North Wiltshire"
+            },
+            {
+              "key": "field_dc_hero_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_hero_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 1,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_hero_text",
+              "label": "Text",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_dc_hero_btn1",
+              "label": "Main button",
+              "name": "button_primary",
+              "type": "link",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            },
+            {
+              "key": "field_dc_hero_btn2",
+              "label": "Second button",
+              "name": "button_secondary",
+              "type": "link",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            },
+            {
+              "key": "field_dc_hero_brand",
+              "label": "Brand film",
+              "name": "brand_film",
+              "type": "file",
+              "instructions": "Opens in a pop-up from the 'Watch our story' button. Leave empty to hide the button.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "id",
+              "library": "all",
+              "mime_types": "mp4"
+            },
+            {
+              "key": "field_dc_hero_brand_label",
+              "label": "Brand film button text",
+              "name": "brand_film_label",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Watch our story"
+            },
+            {
+              "key": "field_dc_hero_rail",
+              "label": "Side text",
+              "name": "rail_text",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Built around you"
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_intro": {
+          "key": "layout_dc_intro",
+          "name": "intro",
+          "label": "Intro and key figures",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_intro_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_intro_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_intro_text",
+              "label": "Text",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 4,
+              "new_lines": ""
+            },
+            {
+              "key": "field_dc_intro_strong",
+              "label": "Highlighted line",
+              "name": "strong_text",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_intro_link",
+              "label": "Link",
+              "name": "link",
+              "type": "link",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            },
+            {
+              "key": "field_dc_intro_stats",
+              "label": "Key figures",
+              "name": "stats",
+              "type": "repeater",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "sub_fields": [
+                {
+                  "key": "field_dc_intro_stat_value",
+                  "label": "Figure",
+                  "name": "value",
+                  "type": "text",
+                  "instructions": "For example 25+ or 2",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "30",
+                    "class": "",
+                    "id": ""
+                  }
+                },
+                {
+                  "key": "field_dc_intro_stat_label",
+                  "label": "Label",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "70",
+                    "class": "",
+                    "id": ""
+                  }
+                }
+              ],
+              "layout": "table",
+              "button_label": "Add figure",
+              "min": 0,
+              "max": 4,
+              "collapsed": ""
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_ticker": {
+          "key": "layout_dc_ticker",
+          "name": "ticker",
+          "label": "Scrolling services banner",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_ticker_items",
+              "label": "Items",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "sub_fields": [
+                {
+                  "key": "field_dc_ticker_item",
+                  "label": "Text",
+                  "name": "text",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                  }
+                }
+              ],
+              "layout": "table",
+              "button_label": "Add item",
+              "min": 0,
+              "max": 0,
+              "collapsed": ""
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_services": {
+          "key": "layout_dc_services",
+          "name": "services_grid",
+          "label": "Services grid",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_svc_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_svc_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_svc_intro",
+              "label": "Intro",
+              "name": "intro",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_dc_svc_items",
+              "label": "Services to show",
+              "name": "services",
+              "type": "relationship",
+              "instructions": "Pick and order the services. Leave empty to show all services.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "post_type": [
+                "service"
+              ],
+              "taxonomy": "",
+              "filters": [
+                "search"
+              ],
+              "return_format": "id",
+              "min": "",
+              "max": "",
+              "elements": [
+                "featured_image"
+              ]
+            },
+            {
+              "key": "field_dc_svc_cta_heading",
+              "label": "Final tile heading",
+              "name": "cta_heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Not sure what you need?"
+            },
+            {
+              "key": "field_dc_svc_cta_text",
+              "label": "Final tile text",
+              "name": "cta_text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 2,
+              "new_lines": ""
+            },
+            {
+              "key": "field_dc_svc_cta_button",
+              "label": "Final tile button",
+              "name": "cta_button",
+              "type": "link",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_projects": {
+          "key": "layout_dc_projects",
+          "name": "featured_projects",
+          "label": "Featured projects",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_prj_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_prj_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_prj_link",
+              "label": "Link",
+              "name": "link",
+              "type": "link",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            },
+            {
+              "key": "field_dc_prj_items",
+              "label": "Projects",
+              "name": "projects",
+              "type": "relationship",
+              "instructions": "Pick up to three. The first is shown large.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "post_type": [
+                "project"
+              ],
+              "taxonomy": "",
+              "filters": [
+                "search"
+              ],
+              "return_format": "id",
+              "min": "",
+              "max": 3,
+              "elements": [
+                "featured_image"
+              ]
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_testimonial": {
+          "key": "layout_dc_testimonial",
+          "name": "testimonial",
+          "label": "Client testimonial",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_tst_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_tst_pull",
+              "label": "Headline quote",
+              "name": "pull_quote",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 2,
+              "new_lines": ""
+            },
+            {
+              "key": "field_dc_tst_body",
+              "label": "Full review",
+              "name": "body",
+              "type": "wysiwyg",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "tabs": "all",
+              "toolbar": "basic",
+              "media_upload": 0,
+              "delay": 0
+            },
+            {
+              "key": "field_dc_tst_name",
+              "label": "Client name",
+              "name": "name",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_tst_project",
+              "label": "Project",
+              "name": "project",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_tst_link",
+              "label": "Link",
+              "name": "link",
+              "type": "link",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_team": {
+          "key": "layout_dc_team",
+          "name": "team",
+          "label": "Team",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_team_image",
+              "label": "Photo",
+              "name": "image",
+              "type": "image",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "id",
+              "preview_size": "medium",
+              "library": "all"
+            },
+            {
+              "key": "field_dc_team_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_team_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_team_text",
+              "label": "Text",
+              "name": "text",
+              "type": "wysiwyg",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "tabs": "all",
+              "toolbar": "basic",
+              "media_upload": 0,
+              "delay": 0
+            },
+            {
+              "key": "field_dc_team_button",
+              "label": "Button",
+              "name": "button",
+              "type": "link",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_process": {
+          "key": "layout_dc_process",
+          "name": "process",
+          "label": "How we work",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_prc_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_prc_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_prc_intro",
+              "label": "Intro",
+              "name": "intro",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 2,
+              "new_lines": ""
+            },
+            {
+              "key": "field_dc_prc_steps",
+              "label": "Steps",
+              "name": "steps",
+              "type": "repeater",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "sub_fields": [
+                {
+                  "key": "field_dc_prc_step_title",
+                  "label": "Title",
+                  "name": "title",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "35",
+                    "class": "",
+                    "id": ""
+                  }
+                },
+                {
+                  "key": "field_dc_prc_step_text",
+                  "label": "Text",
+                  "name": "text",
+                  "type": "textarea",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "65",
+                    "class": "",
+                    "id": ""
+                  },
+                  "rows": 2,
+                  "new_lines": ""
+                }
+              ],
+              "layout": "table",
+              "button_label": "Add step",
+              "min": 0,
+              "max": 6,
+              "collapsed": ""
+            },
+            {
+              "key": "field_dc_prc_button",
+              "label": "Button",
+              "name": "button",
+              "type": "link",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_gallery": {
+          "key": "layout_dc_gallery",
+          "name": "detail_gallery",
+          "label": "Detail gallery",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_gal_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_gal_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_gal_intro",
+              "label": "Intro",
+              "name": "intro",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 2,
+              "new_lines": ""
+            },
+            {
+              "key": "field_dc_gal_images",
+              "label": "Images",
+              "name": "images",
+              "type": "repeater",
+              "instructions": "Four images: the first and third are shown tall.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "sub_fields": [
+                {
+                  "key": "field_dc_gal_image",
+                  "label": "Image",
+                  "name": "image",
+                  "type": "image",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                  },
+                  "return_format": "id",
+                  "preview_size": "medium",
+                  "library": "all"
+                },
+                {
+                  "key": "field_dc_gal_caption",
+                  "label": "Caption",
+                  "name": "caption",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                  }
+                }
+              ],
+              "layout": "table",
+              "button_label": "Add image",
+              "min": 0,
+              "max": 4,
+              "collapsed": ""
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_areas": {
+          "key": "layout_dc_areas",
+          "name": "areas",
+          "label": "Areas we cover",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_area_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_area_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_area_intro",
+              "label": "Intro",
+              "name": "intro",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 2,
+              "new_lines": ""
+            },
+            {
+              "key": "field_dc_area_towns",
+              "label": "Towns and villages",
+              "name": "towns",
+              "type": "textarea",
+              "instructions": "One per line.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 8,
+              "new_lines": ""
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_faqs": {
+          "key": "layout_dc_faqs",
+          "name": "faqs",
+          "label": "FAQs",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_faq_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_faq_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_faq_button",
+              "label": "Button",
+              "name": "button",
+              "type": "link",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            },
+            {
+              "key": "field_dc_faq_items",
+              "label": "Questions",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "sub_fields": [
+                {
+                  "key": "field_dc_faq_q",
+                  "label": "Question",
+                  "name": "question",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                  }
+                },
+                {
+                  "key": "field_dc_faq_a",
+                  "label": "Answer",
+                  "name": "answer",
+                  "type": "wysiwyg",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                  },
+                  "tabs": "all",
+                  "toolbar": "basic",
+                  "media_upload": 0,
+                  "delay": 0
+                }
+              ],
+              "layout": "block",
+              "button_label": "Add question",
+              "min": 0,
+              "max": 0,
+              "collapsed": ""
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_cta": {
+          "key": "layout_dc_cta",
+          "name": "cta",
+          "label": "Call to action",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_cta_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Get started"
+            },
+            {
+              "key": "field_dc_cta_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_cta_text",
+              "label": "Text",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 2,
+              "new_lines": ""
+            },
+            {
+              "key": "field_dc_cta_button",
+              "label": "Main button",
+              "name": "button",
+              "type": "link",
+              "instructions": "Leave empty to email the quote address in Site Settings.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            },
+            {
+              "key": "field_dc_cta_show_phone",
+              "label": "Show phone button",
+              "name": "show_phone",
+              "type": "true_false",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "ui": 1,
+              "default_value": 1
+            },
+            {
+              "key": "field_dc_cta_show_whatsapp",
+              "label": "Show WhatsApp button",
+              "name": "show_whatsapp",
+              "type": "true_false",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "ui": 1,
+              "default_value": 1
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_text": {
+          "key": "layout_dc_text",
+          "name": "text_block",
+          "label": "Text block",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_txt_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_txt_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_txt_body",
+              "label": "Text",
+              "name": "body",
+              "type": "wysiwyg",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "tabs": "all",
+              "toolbar": "basic",
+              "media_upload": 0,
+              "delay": 0
+            }
+          ],
+          "min": "",
+          "max": ""
+        }
+      },
+      "button_label": "Add section",
+      "min": "",
+      "max": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "page"
+      }
+    ],
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "service"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "acf_after_title",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1793130706
+}

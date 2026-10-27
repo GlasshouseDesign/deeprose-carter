@@ -1,0 +1,93 @@
+{
+  "key": "group_dc_project",
+  "title": "Project details",
+  "fields": [
+    {
+      "key": "field_dc_prj_location",
+      "label": "Location",
+      "name": "location",
+      "type": "text",
+      "instructions": "Town or village, shown on cards.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_dc_prj_summary",
+      "label": "Summary",
+      "name": "summary",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 3,
+      "new_lines": ""
+    },
+    {
+      "key": "field_dc_prj_gallery_note",
+      "label": "Gallery",
+      "name": "gallery",
+      "type": "repeater",
+      "instructions": "Further photos for the project page.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "sub_fields": [
+        {
+          "key": "field_dc_prj_gallery_img",
+          "label": "Image",
+          "name": "image",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "id",
+          "preview_size": "medium",
+          "library": "all"
+        }
+      ],
+      "layout": "table",
+      "button_label": "Add image",
+      "min": 0,
+      "max": 0,
+      "collapsed": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "project"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1793130705
+}
