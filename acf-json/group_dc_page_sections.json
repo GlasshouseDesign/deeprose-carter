@@ -1966,6 +1966,176 @@
           ],
           "min": "",
           "max": ""
+        },
+        "layout_dc_contact_form": {
+          "key": "layout_dc_contact_form",
+          "name": "contact_form",
+          "label": "Contact form",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_cf_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Request a quote"
+            },
+            {
+              "key": "field_dc_cf_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_cf_intro",
+              "label": "Intro",
+              "name": "intro",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_dc_cf_shortcode",
+              "label": "Form shortcode",
+              "name": "form_shortcode",
+              "type": "text",
+              "instructions": "Paste a Gravity Forms or WPForms shortcode, for example [gravityform id=\"1\" title=\"false\" ajax=\"true\"]. Leave empty to use the theme's built-in quote form, which emails the quote address in Site Settings.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_cf_steps_title",
+              "label": "Next steps title",
+              "name": "steps_title",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "What happens next"
+            },
+            {
+              "key": "field_dc_cf_steps",
+              "label": "Next steps",
+              "name": "steps",
+              "type": "repeater",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "layout": "block",
+              "button_label": "Add step",
+              "min": 0,
+              "max": 5,
+              "collapsed": "",
+              "sub_fields": [
+                {
+                  "key": "field_dc_cf_step_title",
+                  "label": "Title",
+                  "name": "title",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                  }
+                },
+                {
+                  "key": "field_dc_cf_step_text",
+                  "label": "Text",
+                  "name": "text",
+                  "type": "textarea",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                  },
+                  "rows": 2,
+                  "new_lines": ""
+                }
+              ]
+            },
+            {
+              "key": "field_dc_cf_points",
+              "label": "Reassurance points",
+              "name": "points",
+              "type": "repeater",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "layout": "table",
+              "button_label": "Add point",
+              "min": 0,
+              "max": 5,
+              "collapsed": "",
+              "sub_fields": [
+                {
+                  "key": "field_dc_cf_point",
+                  "label": "Point",
+                  "name": "text",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                  }
+                }
+              ]
+            }
+          ],
+          "min": "",
+          "max": ""
         }
       },
       "button_label": "Add section",
@@ -1998,5 +2168,5 @@
   "active": true,
   "description": "",
   "show_in_rest": 0,
-  "modified": 1793130707
+  "modified": 1793137209
 }

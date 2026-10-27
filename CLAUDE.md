@@ -72,7 +72,7 @@ Changes the client has asked for, which are already done:
 ## Still to do
 
 1. **Service pages:** the Extensions page is built and waiting for client review (branch `service-pages`). It uses five service layouts: `page_hero`, `service_detail` (SEO description, included list, at-a-glance facts and a contact card), `options_grid`, `photo_gallery` (ACF gallery field with a lightbox; captions come from each image's Media Library caption) and `contact_panel`. It also reuses `testimonial`, `process` and `faqs`. The content lives in `inc/demo-services.php` (`dc_demo_service_extensions()`). Next: write the other six services in the same pattern once the client approves Extensions. Copy rules: no prices or timescales unless the client supplies them.
-2. Contact page with a proper quote form (Gravity Forms or WPForms), sending to the quote email, with photo upload.
+2. **Contact page:** built on branch `contact-page` with `page_hero`, a new `contact_form` layout and `areas`. The `contact_form` section shows a Gravity Forms or WPForms shortcode if one is pasted into its "Form shortcode" field; otherwise it uses the theme's built-in quote form (`inc/contact-form.php`), which emails the quote address with photos attached (up to 5 files, 8MB) and stores nothing. Gravity Forms output is styled to match under `.cf-box`. Next: install Gravity Forms, rebuild the same fields (name, email, phone, postcode, project type, start date, message, file upload, consent), set the notification to the quote email and paste the shortcode in. In Local, sent emails appear in Mailpit (Local → Tools → Mailpit).
 3. About page design, project page design, and the blog listing and article design refinements.
 4. SEO: Rank Math or Yoast, plus LocalBusiness schema.
 5. Before launch:

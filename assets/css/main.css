@@ -497,3 +497,55 @@ details .answer p+p{margin-top:12px}
   .pgallery .pg-item:not(.pg-0) .pg-cap{display:none}
   .cp-details dd{font-size:16px}
 }
+
+/* contact form */
+.contact-form{background:var(--paper)}
+.cf-grid{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:88px;align-items:start}
+.cf-main h2{margin-bottom:18px}
+.cf-main .lede{margin-bottom:40px;max-width:620px}
+.cf-aside{position:sticky;top:130px;display:flex;flex-direction:column;gap:20px}
+.cf-phone{font-family:var(--trajan);font-weight:400;font-size:24px;letter-spacing:.04em}
+.cf-address{margin-top:14px;font-size:15px;line-height:1.6;color:var(--soft)}
+.cf-steps{list-style:none;padding:0;counter-reset:cf;display:flex;flex-direction:column;gap:18px}
+.cf-steps li{counter-increment:cf;position:relative;padding-left:44px}
+.cf-steps li:before{content:counter(cf,decimal-leading-zero);position:absolute;left:0;top:-1px;font-family:var(--trajan);font-size:17px;color:var(--mist);letter-spacing:.06em}
+.cf-steps b{display:block;font-weight:600;font-size:15.5px;color:var(--navy);margin-bottom:4px}
+.cf-steps span{display:block;font-size:14.5px;line-height:1.6;color:var(--slate)}
+.cf-points{padding:6px 4px}
+
+/* fields, shared by the built-in form and Gravity Forms */
+.cf{display:flex;flex-direction:column;gap:26px}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.cf-field{display:flex;flex-direction:column;gap:9px;min-width:0}
+.cf label,.cf-label,.cf-box .gfield_label,.cf-box .gform-field-label{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--navy)}
+.cf abbr,.cf-box .gfield_required{color:var(--slate);text-decoration:none;border:0}
+.cf input[type=text],.cf input[type=email],.cf input[type=tel],.cf select,.cf textarea,
+.cf-box .gform_wrapper input:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=file]),.cf-box .gform_wrapper select,.cf-box .gform_wrapper textarea{width:100%;font:500 16px/1.5 var(--raleway);color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:0;padding:14px 16px;transition:border-color .2s,box-shadow .2s}
+.cf textarea,.cf-box .gform_wrapper textarea{min-height:170px;resize:vertical}
+.cf select,.cf-box .gform_wrapper select{appearance:none;padding-right:44px;background:var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%231A2B4B' stroke-width='1.5'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E") right 18px center/12px no-repeat}
+.cf ::placeholder,.cf-box ::placeholder{color:var(--mist)}
+.cf input:focus,.cf select:focus,.cf textarea:focus,.cf-box .gform_wrapper :is(input,select,textarea):focus{outline:0;border-color:var(--navy);box-shadow:0 0 0 3px rgba(26,43,75,.12)}
+.cf [aria-invalid=true],.cf-box .gfield_error :is(input,select,textarea){border-color:#A33A2B}
+.cf-error,.cf-box .gfield_validation_message,.cf-box .validation_message{font-size:13.5px;font-weight:600;color:#A33A2B}
+.cf-alert,.cf-box .gform_validation_errors{background:#F6E7E3;border-left:3px solid #A33A2B;padding:14px 18px;font-size:15px;color:#7A2A1F}
+.cf-hint,.cf-box .gfield_description{font-size:13.5px;line-height:1.5;color:var(--slate)}
+.cf-drop{position:relative;display:flex;align-items:center;gap:16px;flex-wrap:wrap;border:1px dashed var(--soft);background:var(--white);padding:18px;cursor:pointer;text-transform:none!important;letter-spacing:0!important;font-weight:500!important;font-size:15px!important;color:var(--slate)!important;transition:border-color .2s}
+.cf-drop:hover,.cf-drop:focus-within{border-color:var(--navy)}
+.cf-drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.cf-drop-text{border:1px solid var(--navy);color:var(--navy);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:10px 16px}
+.cf-check{display:flex;gap:14px;align-items:flex-start;text-transform:none!important;letter-spacing:0!important;font-weight:500!important;font-size:15px!important;line-height:1.55;color:var(--slate)!important}
+.cf-check input{flex:none;width:20px;height:20px;margin-top:1px;accent-color:var(--navy)}
+.cf-check a{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
+.cf-submit,.cf-box .gform_wrapper .gform_button,.cf-box .wpforms-submit{align-self:flex-start;cursor:pointer;background:var(--navy)!important;color:var(--white)!important;border:0!important;border-radius:0!important;padding:18px 34px!important;font:600 12.5px var(--raleway)!important;letter-spacing:.18em!important;text-transform:uppercase}
+.cf-submit:hover,.cf-box .gform_wrapper .gform_button:hover{background:var(--navy-deep)!important}
+.cf-hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cf-done{background:var(--navy);color:var(--cream);padding:48px 44px;outline:0}
+.cf-done .win{margin-bottom:20px}
+.cf-done h3{font-family:var(--trajan);font-weight:400;font-size:28px;line-height:1.2;letter-spacing:.03em;margin-bottom:12px}
+.cf-done p{font-size:16.5px;line-height:1.65;color:var(--soft)}
+.cf-box .gform_wrapper .gform_fields{row-gap:26px!important;column-gap:26px!important}
+.cf-box .gform_wrapper .gform_footer{margin-top:28px;padding:0}
+.cf-box .gform_confirmation_message{background:var(--navy);color:var(--cream);padding:40px;font-size:17px;line-height:1.6}
+
+@media(max-width:1100px){.cf-grid{grid-template-columns:1fr;gap:48px}.cf-aside{position:static}}
+@media(max-width:900px){.cf-row{grid-template-columns:1fr}.cf-done{padding:36px 28px}.cf-submit{align-self:stretch;justify-content:center}}
