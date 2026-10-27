@@ -1345,6 +1345,627 @@
           ],
           "min": "",
           "max": ""
+        },
+        "layout_dc_page_hero": {
+          "key": "layout_dc_page_hero",
+          "name": "page_hero",
+          "label": "Page hero (image)",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_ph_image",
+              "label": "Image",
+              "name": "image",
+              "type": "image",
+              "instructions": "",
+              "required": 1,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "id",
+              "preview_size": "medium",
+              "library": "all"
+            },
+            {
+              "key": "field_dc_ph_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_ph_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "Leave empty to use the page title.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_ph_text",
+              "label": "Intro",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_dc_ph_btn1",
+              "label": "Main button",
+              "name": "button_primary",
+              "type": "link",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            },
+            {
+              "key": "field_dc_ph_btn2",
+              "label": "Second button",
+              "name": "button_secondary",
+              "type": "link",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            },
+            {
+              "key": "field_dc_ph_crumbs",
+              "label": "Show breadcrumb",
+              "name": "breadcrumb",
+              "type": "true_false",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "ui": 1,
+              "default_value": 1
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_service_detail": {
+          "key": "layout_dc_service_detail",
+          "name": "service_detail",
+          "label": "Service description and included list",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_sd_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_sd_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_sd_body",
+              "label": "Description",
+              "name": "body",
+              "type": "wysiwyg",
+              "instructions": "The main, search-friendly description. Use Heading 2 and Heading 3 for sub-headings.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "tabs": "all",
+              "toolbar": "full",
+              "media_upload": 0,
+              "delay": 0
+            },
+            {
+              "key": "field_dc_sd_list_title",
+              "label": "Included list title",
+              "name": "list_title",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "What we can include"
+            },
+            {
+              "key": "field_dc_sd_list",
+              "label": "Included list",
+              "name": "list",
+              "type": "repeater",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "sub_fields": [
+                {
+                  "key": "field_dc_sd_list_item",
+                  "label": "Item",
+                  "name": "item",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                  }
+                }
+              ],
+              "layout": "table",
+              "button_label": "Add item",
+              "min": 0,
+              "max": 0,
+              "collapsed": ""
+            },
+            {
+              "key": "field_dc_sd_facts",
+              "label": "At a glance",
+              "name": "facts",
+              "type": "repeater",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "sub_fields": [
+                {
+                  "key": "field_dc_sd_fact_label",
+                  "label": "Label",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "40",
+                    "class": "",
+                    "id": ""
+                  }
+                },
+                {
+                  "key": "field_dc_sd_fact_value",
+                  "label": "Value",
+                  "name": "value",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "60",
+                    "class": "",
+                    "id": ""
+                  }
+                }
+              ],
+              "layout": "table",
+              "button_label": "Add fact",
+              "min": 0,
+              "max": 0,
+              "collapsed": ""
+            },
+            {
+              "key": "field_dc_sd_contact",
+              "label": "Show contact card",
+              "name": "show_contact",
+              "type": "true_false",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "ui": 1,
+              "default_value": 1
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_options_grid": {
+          "key": "layout_dc_options_grid",
+          "name": "options_grid",
+          "label": "Options grid",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_og_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_og_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_og_intro",
+              "label": "Intro",
+              "name": "intro",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 2,
+              "new_lines": ""
+            },
+            {
+              "key": "field_dc_og_items",
+              "label": "Options",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "sub_fields": [
+                {
+                  "key": "field_dc_og_item_image",
+                  "label": "Image",
+                  "name": "image",
+                  "type": "image",
+                  "instructions": "Optional",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                  },
+                  "return_format": "id",
+                  "preview_size": "medium",
+                  "library": "all"
+                },
+                {
+                  "key": "field_dc_og_item_title",
+                  "label": "Title",
+                  "name": "title",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                  }
+                },
+                {
+                  "key": "field_dc_og_item_text",
+                  "label": "Text",
+                  "name": "text",
+                  "type": "textarea",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                  },
+                  "rows": 3,
+                  "new_lines": ""
+                }
+              ],
+              "layout": "block",
+              "button_label": "Add option",
+              "min": 0,
+              "max": 0,
+              "collapsed": ""
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_photo_gallery": {
+          "key": "layout_dc_photo_gallery",
+          "name": "photo_gallery",
+          "label": "Photo gallery",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_pg_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_pg_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_pg_intro",
+              "label": "Intro",
+              "name": "intro",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 2,
+              "new_lines": ""
+            },
+            {
+              "key": "field_dc_pg_images",
+              "label": "Photos",
+              "name": "images",
+              "type": "gallery",
+              "instructions": "Drag to reorder. Captions come from each photo's caption in the Media Library. Photos open full size when clicked.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "id",
+              "preview_size": "medium",
+              "insert": "append",
+              "library": "all",
+              "min": "",
+              "max": ""
+            },
+            {
+              "key": "field_dc_pg_link",
+              "label": "Link",
+              "name": "link",
+              "type": "link",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_dc_contact_panel": {
+          "key": "layout_dc_contact_panel",
+          "name": "contact_panel",
+          "label": "Contact panel",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_dc_cp_eyebrow",
+              "label": "Eyebrow",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "Small capitals label above the heading.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Get in touch"
+            },
+            {
+              "key": "field_dc_cp_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              }
+            },
+            {
+              "key": "field_dc_cp_text",
+              "label": "Text",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_dc_cp_points",
+              "label": "Reassurance points",
+              "name": "points",
+              "type": "repeater",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "sub_fields": [
+                {
+                  "key": "field_dc_cp_point",
+                  "label": "Point",
+                  "name": "text",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                  }
+                }
+              ],
+              "layout": "table",
+              "button_label": "Add point",
+              "min": 0,
+              "max": 5,
+              "collapsed": ""
+            },
+            {
+              "key": "field_dc_cp_button",
+              "label": "Main button",
+              "name": "button",
+              "type": "link",
+              "instructions": "Leave empty to email the quote address in Site Settings.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            },
+            {
+              "key": "field_dc_cp_image",
+              "label": "Photo",
+              "name": "image",
+              "type": "image",
+              "instructions": "Optional photo beside the contact details.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "id",
+              "preview_size": "medium",
+              "library": "all"
+            }
+          ],
+          "min": "",
+          "max": ""
         }
       },
       "button_label": "Add section",
@@ -1377,5 +1998,5 @@
   "active": true,
   "description": "",
   "show_in_rest": 0,
-  "modified": 1793130706
+  "modified": 1793130707
 }

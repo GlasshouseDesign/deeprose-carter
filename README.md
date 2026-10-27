@@ -45,6 +45,8 @@ Running it again updates these items rather than duplicating them, and overwrite
 
 Hero film · Intro and key figures · Scrolling services banner · Services grid · Featured projects · Client testimonial · Team · How we work · Detail gallery · Areas we cover · FAQs (adds FAQ structured data for Google) · Call to action · Text block
 
+Service pages also use: Page hero (image, with breadcrumb) · Service description and included list · Options grid · Photo gallery (click to enlarge) · Contact panel
+
 ## Fonts
 
 Trajan Pro 3 and Raleway load from Adobe Fonts using the project ID in Site Settings → Fonts. The current ID (`jtl2yxi`) was created for the design concepts. Before launch, create a web project in the client's Adobe Fonts account with both fonts, add the live domain, and paste its ID into Site Settings.

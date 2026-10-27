@@ -15,6 +15,7 @@ require DC_DIR . '/inc/helpers.php';
 require DC_DIR . '/inc/content-types.php';
 require DC_DIR . '/inc/acf.php';
 require DC_DIR . '/inc/demo-setup.php';
+require DC_DIR . '/inc/demo-services.php';
 
 /**
  * Theme supports, menus and image sizes.

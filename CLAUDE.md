@@ -71,7 +71,7 @@ Changes the client has asked for, which are already done:
 
 ## Still to do
 
-1. **Service page template:** the next task. Design dedicated service pages: a hero, what's included, related projects (filtered by project type), FAQs and a call to action. Build them as new section layouts so each service page is assembled from sections.
+1. **Service pages:** the Extensions page is built and waiting for client review (branch `service-pages`). It uses five service layouts: `page_hero`, `service_detail` (SEO description, included list, at-a-glance facts and a contact card), `options_grid`, `photo_gallery` (ACF gallery field with a lightbox; captions come from each image's Media Library caption) and `contact_panel`. It also reuses `testimonial`, `process` and `faqs`. The content lives in `inc/demo-services.php` (`dc_demo_service_extensions()`). Next: write the other six services in the same pattern once the client approves Extensions. Copy rules: no prices or timescales unless the client supplies them.
 2. Contact page with a proper quote form (Gravity Forms or WPForms), sending to the quote email, with photo upload.
 3. About page design, project page design, and the blog listing and article design refinements.
 4. SEO: Rank Math or Yoast, plus LocalBusiness schema.

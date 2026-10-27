@@ -51,6 +51,40 @@
   box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
   box.addEventListener('close', function () { film.pause(); });
 
+  /* Photo gallery lightbox */
+  document.querySelectorAll('[data-lightbox]').forEach(function (gal) {
+    var items = Array.prototype.slice.call(gal.querySelectorAll('a'));
+    if (!items.length) return;
+    var lb = document.createElement('dialog');
+    lb.className = 'lightbox';
+    lb.setAttribute('aria-label', 'Photo viewer');
+    lb.innerHTML = '<figure><img alt=""><figcaption></figcaption></figure><span class="lb-count"></span>' +
+      '<button class="lb-btn lb-close" type="button" aria-label="Close">&times;</button>' +
+      '<button class="lb-btn lb-prev" type="button" aria-label="Previous photo">&#8249;</button>' +
+      '<button class="lb-btn lb-next" type="button" aria-label="Next photo">&#8250;</button>';
+    document.body.appendChild(lb);
+    var img = lb.querySelector('img'), cap = lb.querySelector('figcaption'), count = lb.querySelector('.lb-count'), idx = 0;
+    function show(i) {
+      idx = (i + items.length) % items.length;
+      var a = items[idx];
+      img.src = a.href;
+      img.alt = (a.querySelector('img') || {}).alt || '';
+      cap.textContent = a.dataset.caption || '';
+      count.textContent = (idx + 1) + ' / ' + items.length;
+    }
+    items.forEach(function (a, i) {
+      a.addEventListener('click', function (e) { e.preventDefault(); show(i); lb.showModal(); });
+    });
+    lb.querySelector('.lb-close').addEventListener('click', function () { lb.close(); });
+    lb.querySelector('.lb-prev').addEventListener('click', function () { show(idx - 1); });
+    lb.querySelector('.lb-next').addEventListener('click', function () { show(idx + 1); });
+    lb.addEventListener('click', function (e) { if (e.target === lb || e.target.tagName === 'FIGURE') lb.close(); });
+    lb.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') show(idx - 1);
+      if (e.key === 'ArrowRight') show(idx + 1);
+    });
+  });
+
   /* Hero card entrance */
   var card = document.querySelector('.card');
   if (card && !reduceMotion) card.classList.add('intro-anim');
@@ -65,8 +99,8 @@
   /* Scroll reveals: text fades up, photos wipe in, siblings stagger */
   var groups = [
     ['.eyebrow, h2, .lede, .pull, .who, .story p, .stats > div, .people > div', 'reveal'],
-    ['.tile, .step, .review, .chips span, details, .btnrow, .cta-band .ctas', 'reveal'],
-    ['.proj, .dgrid figure, .photo', 'reveal-img']
+    ['.tile, .step, .review, .chips span, details, .btnrow, .cta-band .ctas, .sd-card, .option, .ticks li, .cp-details dl > div', 'reveal'],
+    ['.proj, .dgrid figure, .photo, .pg-item, .option .ph, .cp-img', 'reveal-img']
   ];
   var targets = [];
   groups.forEach(function (g) {

@@ -254,6 +254,16 @@ function dc_demo_run() {
 		'button'        => dc_demo_link( get_permalink( $about ), 'About us' ),
 	);
 
+	$testimonial_row = array(
+		'acf_fc_layout' => 'testimonial',
+		'eyebrow'       => 'Client story',
+		'pull_quote'    => 'Exceptional workmanship, thoughtful advice and a team that genuinely cares about getting things right.',
+		'body'          => "<p>Josh, Calum and the team transformed four rooms in our very old house into one large kitchen-diner, dealing with different floor levels, structural challenges and the removal of a staircase along the way.</p>\n<p>They were knowledgeable, professional and incredibly thorough, taking the time to understand the existing building and even identifying an important change needed to the structural plans once the roof was exposed.</p>\n<p>The quality of the craftsmanship was outstanding, from rebuilding stone pillars and lime plastering to incorporating the original chimneys beautifully into the finished design.</p>\n<p>They were reliable, consultative and always willing to go the extra mile to keep the project on track. We couldn't be happier with the result and are already looking forward to working with them again. Highly recommended.</p>",
+		'name'          => 'Joe Davies',
+		'project'       => 'Kitchen-diner renovation',
+		'link'          => dc_demo_link( 'https://www.facebook.com/JDeeprosedevelopmentsltd', 'Read more reviews', '_blank' ),
+	);
+
 	$home_sections = array(
 		array(
 			'acf_fc_layout'    => 'hero_film',
@@ -364,6 +374,10 @@ function dc_demo_run() {
 		$cta_row,
 	);
 	update_field( 'field_dc_sections', $home_sections, $home );
+
+	// Service pages.
+	dc_demo_service_extensions( $services['extensions'], $m, array( 'contact_url' => $contact_url, 'testimonial' => $testimonial_row ) );
+	$log[] = 'Extensions service page built.';
 
 	update_field(
 		'field_dc_sections',
