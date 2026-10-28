@@ -1,6 +1,6 @@
 # Deeprose & Carter: project handover
 
-Read this first. It sums up the project so far, so a new session can carry on where the last one finished.
+Read this first. It sums up the project so far, so a new session can carry on where the last one finished. Then read `HANDOVER.md` for the history, links, Cloudways deployment and next steps.
 
 ## The project
 
