@@ -12,6 +12,7 @@ Last updated: 28 October 2026.
 - **GitHub:** https://github.com/GlasshouseDesign/deeprose-carter (private).
 - **Figma:** wireframes v1 at https://www.figma.com/design/pw0ZviRxZPeN3GRQxT8pEZ (on Jon's connected account, not yet the Glasshouse one).
 - **Hosting:** Local (Flywheel) for development; Cloudways for staging and, later, live.
+- **Local theme folder:** `~/Local Sites/deeprose-carter-developments/app/public/wp-content/themes/deeprose-carter`
 
 ## Links
 
