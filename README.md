@@ -54,7 +54,7 @@ Trajan Pro 3 and Raleway load from Adobe Fonts using the project ID in Site Sett
 ## Placeholders to replace before launch
 
 - Phone number, company number, WhatsApp number (Site Settings)
-- Key figures: XX+, XXX+, £XM (Home → Intro and key figures)
+- Key figures: XX+ and XXX+ (Home → Intro and key figures)
 - FAQ answers (Home → FAQs)
 - Loft & Garage Conversions photo (Services → Loft & Garage Conversions → featured image)
 - Team photo: the jumper logos need updating

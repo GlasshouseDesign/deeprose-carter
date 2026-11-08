@@ -46,6 +46,11 @@ Changes the client has asked for, which are already done:
 - The quote email is jo@jdeeprosedevelopments.co.uk (Site Settings → Quote email).
 - The scrolling services banner was added above Services.
 - The name tiles in the Team section were removed.
+- The hero card is a little smaller (552px wide, 46px headline), so more of the film shows.
+- Intro strong line: "You bring us the idea, we take care of the rest." Public liability cover: £10M.
+- The Mile Elm project is now in Calne and described as a full top-to-bottom renovation inside and out, with the extension.
+- Company number 12007910 is in Site Settings (footer text).
+- Three new orangery-style extension photos (`demo/img/orangery-*.jpg`) are in the Extensions gallery.
 
 ## How the theme works
 
@@ -77,11 +82,11 @@ Changes the client has asked for, which are already done:
 4. SEO: Rank Math or Yoast, plus LocalBusiness schema.
 5. Before launch:
    - Create an Adobe Fonts web project for the live domain, and update the kit ID in Site Settings (the current `jtl2yxi` was made for the concepts).
-   - Replace the placeholders: phone number, company number, WhatsApp, the XX figures, FAQ answers, the Loft & Garage Conversions photo, project write-ups and the sample blog post.
+   - Replace the placeholders: phone number, WhatsApp, the XX figures (years' experience and projects completed), FAQ answers, the Loft & Garage Conversions photo, project write-ups and the sample blog post.
    - Update the team photo: the jumpers show the old logo.
 
 ## Open questions for the client
 
 - **"Callum" or "Calum"?** The review says Calum. Use one spelling everywhere once confirmed.
 - **Email address:** is jo@jdeeprosedevelopments.co.uk staying, or moving to a new domain?
-- The real figures for years' experience, projects completed and insurance cover.
+- The real figures for years' experience and projects completed.

@@ -26,8 +26,11 @@ function dc_demo_caption( $id, $caption ) {
 function dc_demo_service_extensions( $post_id, $m, $shared ) {
 	$contact = $shared['contact_url'];
 
-	dc_demo_caption( $m['extension-arches'], 'Stone extension, Mile Elm' );
-	dc_demo_caption( $m['extension-glazed'], 'Glazed doors to the garden, Mile Elm' );
+	dc_demo_caption( $m['extension-arches'], 'Stone extension, Calne' );
+	dc_demo_caption( $m['extension-glazed'], 'Glazed doors to the garden, Calne' );
+	dc_demo_caption( $m['orangery-dusk'], 'Orangery-style extension and stone terrace' );
+	dc_demo_caption( $m['orangery-terrace'], 'Orangery-style extension on a stone cottage' );
+	dc_demo_caption( $m['orangery-front-door'], 'New entrance with stone surround' );
 	dc_demo_caption( $m['extension-bifold'], 'Bifold doors and terrace' );
 	dc_demo_caption( $m['kitchen-open-plan'], 'Open-plan kitchen, Sutton Benger' );
 	dc_demo_caption( $m['kitchen-marble'], 'Kitchen-diner' );
@@ -121,7 +124,7 @@ function dc_demo_service_extensions( $post_id, $m, $shared ) {
 			'eyebrow'       => 'Recent work',
 			'heading'       => 'Our extensions',
 			'intro'         => 'A selection of extensions we have built across North Wiltshire. Click any photo to see it full size.',
-			'images'        => array( $m['extension-arches'], $m['extension-bifold'], $m['kitchen-marble'], $m['extension-glazed'], $m['kitchen-open-plan'], $m['rendered-extension'] ),
+			'images'        => array( $m['extension-arches'], $m['orangery-dusk'], $m['extension-bifold'], $m['kitchen-marble'], $m['orangery-front-door'], $m['extension-glazed'], $m['kitchen-open-plan'], $m['orangery-terrace'], $m['rendered-extension'] ),
 			'link'          => dc_demo_link( get_post_type_archive_link( 'project' ), 'View all projects' ),
 		),
 		$shared['testimonial'],

@@ -2,7 +2,7 @@
 
 A record of the work so far and where it stands, so a new session can pick up without the old chat. Read `CLAUDE.md` first for the house rules and how the theme works; this file adds the history, the links, the Cloudways deployment and the next steps.
 
-Last updated: 28 October 2026.
+Last updated: 8 November 2026.
 
 ## People and accounts
 
@@ -27,7 +27,8 @@ Last updated: 28 October 2026.
 4. **The client chose The Film.** A full, working HTML homepage was built with hover states, scroll reveals, count-up figures, the film pop-up and the scrolling services banner, then revised for the client's changes (see `CLAUDE.md`, Approved design).
 5. **WordPress theme** (this repository): all homepage sections as ACF flexible content, services and projects post types, the blog, Site Settings, menus, and a one-click demo setup. Tested in a clean WordPress with every page returning 200 and no PHP warnings.
 6. **Service pages:** five new layouts and the full Extensions page (branch `service-pages`). Client review copy with [CHECK] points was supplied as "Extensions - copy for review.md".
-7. **Workflow:** Jon's Local site is a git clone of this repository on `service-pages`, updated with `git pull`. See `WORKFLOW.md`.
+7. **Client revisions (8 November):** smaller hero card, the new intro line, £10M public liability cover, Mile Elm renamed to Calne with the full renovation described, company number 12007910, and three new orangery photos in the Extensions gallery. A `contact-page` branch with a quote form also exists on GitHub, made in another session and not yet merged.
+8. **Workflow:** Jon's Local site is a git clone of this repository on `service-pages`, updated with `git pull`. See `WORKFLOW.md`.
 
 ## Branches
 
@@ -73,7 +74,7 @@ In order:
 
 - Callum or Calum?
 - Is jo@jdeeprosedevelopments.co.uk staying or moving to a new domain?
-- Real figures: years' experience, projects completed, insurance cover.
+- Real figures: years' experience and projects completed.
 - Accreditations and memberships to show.
 - The Extensions [CHECK] points: recommended architects, the included list, gallery captions, a guarantee or typical timescale, and a review from an extension client.
 - A new team photo with the new logo.

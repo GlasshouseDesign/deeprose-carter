@@ -72,6 +72,9 @@ function dc_demo_page() {
 function dc_demo_media( $rel, $alt = '' ) {
 	$existing = get_posts( array( 'post_type' => 'attachment', 'post_status' => 'inherit', 'numberposts' => 1, 'meta_key' => '_dc_demo_file', 'meta_value' => $rel, 'fields' => 'ids' ) );
 	if ( $existing ) {
+		if ( $alt ) {
+			update_post_meta( $existing[0], '_wp_attachment_image_alt', $alt );
+		}
 		return (int) $existing[0];
 	}
 	$src = DC_DIR . '/demo/' . $rel;
@@ -160,9 +163,9 @@ function dc_demo_run() {
 	// Media.
 	$m = array();
 	$photos = array(
-		'extension-arches'     => 'Stone extension with arched steel windows at Mile Elm',
+		'extension-arches'     => 'Stone extension with arched steel windows in Calne',
 		'extension-bifold'     => 'Stone extension with bifold doors',
-		'extension-glazed'     => 'Stone extension with glazed doors at Mile Elm',
+		'extension-glazed'     => 'Stone extension with glazed doors in Calne',
 		'kitchen-marble'       => 'Kitchen with a marble-topped island',
 		'kitchen-open-plan'    => 'Open-plan kitchen with a dark island',
 		'kitchen-island'       => 'Painted kitchen island',
@@ -175,8 +178,11 @@ function dc_demo_run() {
 		'arched-shower'        => 'Arched tiled shower',
 		'rendered-extension'   => 'Rendered extension with stone quoins',
 		'stone-wall-extension' => 'Stone extension wall with roof lights',
+		'orangery-dusk'        => 'Orangery-style extension with glazed doors on to a stone terrace',
+		'orangery-terrace'     => 'Orangery-style extension on a stone cottage',
+		'orangery-front-door'  => 'Orangery-style extension with a new front door and stone surround',
 		'team-plans'           => 'Josh and Callum reviewing plans on site',
-		'hero-poster'          => 'Stone extension at Mile Elm',
+		'hero-poster'          => 'Stone extension in Calne',
 		'brand-film-poster'    => 'Brand film',
 	);
 	foreach ( $photos as $file => $alt ) {
@@ -212,7 +218,7 @@ function dc_demo_run() {
 
 	// Projects.
 	$projects_data = array(
-		array( 'mile-elm', 'Stone extension & garden', 'Mile Elm', array( 'Extension', 'Kitchen', 'Landscaping' ), 'extension-arches', 'A single-storey stone extension with arched steel windows, a new kitchen and a landscaped garden.', array( 'extension-glazed', 'kitchen-marble', 'hallway-stairs', 'utility-room', 'arched-shower', 'garden-terrace' ) ),
+		array( 'calne', 'Full renovation & stone extension', 'Calne', array( 'Renovation', 'Extension', 'Kitchen', 'Landscaping' ), 'extension-arches', 'The whole house renovated from top to bottom, with a single-storey stone extension with arched steel windows, a new kitchen, and all the outside landscaped.', array( 'extension-glazed', 'kitchen-marble', 'hallway-stairs', 'utility-room', 'arched-shower', 'garden-terrace' ) ),
 		array( 'sutton-benger', 'Open-plan kitchen', 'Sutton Benger', array( 'Kitchen', 'Structural' ), 'kitchen-open-plan', 'Walls opened up to create a bright open-plan kitchen and dining space with bifold doors to the garden.', array() ),
 		array( 'biddestone', 'New stone home', 'Biddestone', array( 'New build' ), 'biddestone-house', 'A new stone house built from the groundworks up.', array() ),
 	);
@@ -285,12 +291,12 @@ function dc_demo_run() {
 			'eyebrow'       => 'Built around you',
 			'heading'       => 'A well-run build makes all the difference',
 			'text'          => 'From extensions to full house renovations, we bring together skilled workmanship, careful coordination and practical thinking to keep your project moving smoothly.',
-			'strong_text'   => "You bring us the idea. We'll take care of what it takes to make it happen.",
+			'strong_text'   => 'You bring us the idea, we take care of the rest.',
 			'link'          => dc_demo_link( get_permalink( $about ), 'Our philosophy' ),
 			'stats'         => array(
 				array( 'value' => 'XX+', 'label' => "Years' combined experience" ),
 				array( 'value' => 'XXX+', 'label' => 'Projects completed' ),
-				array( 'value' => '£XM', 'label' => 'Public liability cover' ),
+				array( 'value' => '£10M', 'label' => 'Public liability cover' ),
 				array( 'value' => '2', 'label' => 'Owners on every build' ),
 			),
 		),
@@ -449,13 +455,13 @@ function dc_demo_run() {
 		'field_dc_set_strapline'      => 'Built around you',
 		'field_dc_set_footer_text'    => 'Owner-managed builders based in Chippenham, working across North Wiltshire.',
 		'field_dc_set_social'         => array( array( 'label' => 'Facebook', 'url' => 'https://www.facebook.com/JDeeprosedevelopmentsltd' ) ),
-		'field_dc_set_company'        => 'Registered in England & Wales · Company no. XXXXXXXX',
+		'field_dc_set_company'        => 'Registered in England & Wales · Company no. 12007910',
 		'field_dc_set_fonts_kit'      => 'jtl2yxi',
 	);
 	foreach ( $settings as $key => $value ) {
 		update_field( $key, $value, 'option' );
 	}
-	$log[] = 'Site Settings filled in (phone number and company number are placeholders).';
+	$log[] = 'Site Settings filled in (the phone number is a placeholder).';
 
 	// Menus.
 	$privacy = (int) get_option( 'wp_page_for_privacy_policy' );
