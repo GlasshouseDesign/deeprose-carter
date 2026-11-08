@@ -28,7 +28,8 @@ Last updated: 8 November 2026.
 5. **WordPress theme** (this repository): all homepage sections as ACF flexible content, services and projects post types, the blog, Site Settings, menus, and a one-click demo setup. Tested in a clean WordPress with every page returning 200 and no PHP warnings.
 6. **Service pages:** five new layouts and the full Extensions page (branch `service-pages`). Client review copy with [CHECK] points was supplied as "Extensions - copy for review.md".
 7. **Client revisions (8 November):** smaller hero card, the new intro line, £10M public liability cover, Mile Elm renamed to Calne with the full renovation described, company number 12007910, and three new orangery photos in the Extensions gallery. A `contact-page` branch with a quote form also exists on GitHub, made in another session and not yet merged.
-8. **Workflow:** Jon's Local site is a git clone of this repository on `service-pages`, updated with `git pull`. See `WORKFLOW.md`.
+8. **The other six service pages (8 November):** Kitchens, Loft & Garage Conversions, Renovations, Structural Alterations, Groundworks & Landscaping and New Builds, written for local SEO (each about 1,000 words, with a meta description in the excerpt and question-led FAQs). They share `dc_demo_service_page()` in `inc/demo-services.php`.
+9. **Workflow:** Jon's Local site is a git clone of this repository on `service-pages`, updated with `git pull`. See `WORKFLOW.md`.
 
 ## Branches
 
@@ -78,6 +79,9 @@ In order:
 - Accreditations and memberships to show.
 - The Extensions [CHECK] points: recommended architects, the included list, gallery captions, a guarantee or typical timescale, and a review from an extension client.
 - A new team photo with the new logo.
+- Service page [CHECK] points: do they supply kitchens or fit the client's own; fire, flood and insurance work (Renovations and Structural), including subsidence repairs; which driveway and patio materials they lay (resin-bound, porcelain, block paving), and whether they turf and build pergolas; timber frame, small developments and commercial new builds; and annexes under Conversions.
+- Photos needed: any loft or garage conversion (the page uses the team photo for now), and more new builds than Biddestone, so those two pages can have galleries.
+- More reviews, ideally one per service: every service page currently reuses Joe Davies's review.
 
 ## Files outside the repository
 

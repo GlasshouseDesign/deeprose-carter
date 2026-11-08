@@ -382,8 +382,15 @@ function dc_demo_run() {
 	update_field( 'field_dc_sections', $home_sections, $home );
 
 	// Service pages.
-	dc_demo_service_extensions( $services['extensions'], $m, array( 'contact_url' => $contact_url, 'testimonial' => $testimonial_row ) );
-	$log[] = 'Extensions service page built.';
+	$service_shared = array( 'contact_url' => $contact_url, 'testimonial' => $testimonial_row );
+	dc_demo_service_extensions( $services['extensions'], $m, $service_shared );
+	dc_demo_service_kitchens( $services['kitchens'], $m, $service_shared );
+	dc_demo_service_conversions( $services['conversions'], $m, $service_shared );
+	dc_demo_service_renovations( $services['renovations'], $m, $service_shared );
+	dc_demo_service_structural( $services['structural'], $m, $service_shared );
+	dc_demo_service_groundworks( $services['groundworks'], $m, $service_shared );
+	dc_demo_service_new_builds( $services['new-builds'], $m, $service_shared );
+	$log[] = 'All seven service pages built.';
 
 	update_field(
 		'field_dc_sections',
