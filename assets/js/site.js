@@ -94,6 +94,23 @@
     a.addEventListener('click', function (e) { e.preventDefault(); a.blur(); });
   });
 
+  /* Quote form: list chosen files, and stop double submits */
+  document.querySelectorAll('.cf-drop input[type=file]').forEach(function (input) {
+    var out = input.parentNode.querySelector('.cf-drop-files');
+    input.addEventListener('change', function () {
+      out.textContent = Array.prototype.map.call(input.files, function (f) { return f.name; }).join(', ');
+    });
+  });
+  document.querySelectorAll('form.cf').forEach(function (form) {
+    form.addEventListener('submit', function () {
+      var btn = form.querySelector('.cf-submit');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+    });
+  });
+  var done = document.getElementById('enquiry-sent');
+  if (done) done.focus({ preventScroll: true });
+
   if (reduceMotion || !('IntersectionObserver' in window)) return;
 
   /* Scroll reveals: text fades up, photos wipe in, siblings stagger */

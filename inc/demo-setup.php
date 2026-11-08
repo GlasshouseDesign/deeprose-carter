@@ -406,16 +406,49 @@ function dc_demo_run() {
 		),
 		$about
 	);
+	// Quote form: built in Gravity Forms when it is active, otherwise the theme's own form is used.
+	$quote_email = 'jo@jdeeprosedevelopments.co.uk';
+	dc_demo_privacy_policy();
+	$gf_form = dc_gf_quote_form( $quote_email );
+	$log[]   = $gf_form ? 'Gravity Forms quote form built and added to the Contact page.' : 'Gravity Forms is not active, so the Contact page uses the built-in quote form.';
+
 	update_field(
 		'field_dc_sections',
 		array(
 			array(
-				'acf_fc_layout' => 'text_block',
-				'eyebrow'       => 'Contact',
-				'heading'       => 'Tell us about your project',
-				'body'          => '<p>Site visits and quotes are free and there is no obligation. Call us, email us or send a WhatsApp message and Josh or Callum will get back to you.</p><p>The full quote form will be added here.</p>',
+				'acf_fc_layout'    => 'page_hero',
+				'image'            => $m['kitchen-open-plan'],
+				'eyebrow'          => 'Contact',
+				'heading'          => "Let's talk about your project",
+				'text'             => 'Site visits and quotes are free, with no obligation. Tell us what you have in mind and Josh or Callum will be in touch.',
+				'button_primary'   => dc_demo_link( '#enquiry', 'Request a quote' ),
+				'button_secondary' => '',
+				'breadcrumb'       => 1,
 			),
-			$cta_row,
+			array(
+				'acf_fc_layout'  => 'contact_form',
+				'eyebrow'        => 'Request a quote',
+				'heading'        => 'Tell us about your project',
+				'intro'          => 'A few details help us understand what you are planning. Photos of the space, or any drawings you have, are really useful but not essential.',
+				'form_shortcode' => $gf_form ? '[gravityform id="' . $gf_form . '" title="false" description="false" ajax="true"]' : '',
+				'steps_title'    => 'What happens next',
+				'steps'          => array(
+					array( 'title' => 'We get in touch', 'text' => 'Josh or Callum will call or email to talk through your ideas.' ),
+					array( 'title' => 'Free site visit', 'text' => 'We visit your home to see the space and understand what you want to achieve.' ),
+					array( 'title' => 'Your itemised quote', 'text' => 'A clear, detailed quote with no hidden costs, so you can decide with confidence.' ),
+				),
+				'points'         => array_map(
+					fn( $t ) => array( 'text' => $t ),
+					array( 'Free, no-obligation quotes', 'Owner-managed from start to finish', 'Based in Chippenham, working across North Wiltshire' )
+				),
+			),
+			array(
+				'acf_fc_layout' => 'areas',
+				'eyebrow'       => 'Areas we cover',
+				'heading'       => 'Based in Chippenham, working across North Wiltshire',
+				'intro'         => 'Not sure if we cover you? Just ask.',
+				'towns'         => implode( "\n", array( 'Chippenham', 'Corsham', 'Calne', 'Malmesbury', 'Melksham', 'Devizes', 'Royal Wootton Bassett', 'Lacock', 'Biddestone', 'Sutton Benger', 'Box', 'Bath', 'Surrounding villages' ) ),
+			),
 		),
 		$contact
 	);
@@ -454,7 +487,7 @@ function dc_demo_run() {
 	// Site Settings.
 	$settings = array(
 		'field_dc_set_phone'          => '01249 000 000',
-		'field_dc_set_quote_email'    => 'jo@jdeeprosedevelopments.co.uk',
+		'field_dc_set_quote_email'    => $quote_email,
 		'field_dc_set_email'          => 'jo@jdeeprosedevelopments.co.uk',
 		'field_dc_set_whatsapp'       => '',
 		'field_dc_set_address'        => 'Chippenham, Wiltshire',

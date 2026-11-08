@@ -31,7 +31,8 @@ Last updated: 8 November 2026.
 8. **The other six service pages (8 November):** Kitchens, Loft & Garage Conversions, Renovations, Structural Alterations, Groundworks & Landscaping and New Builds, written for local SEO (each about 1,000 words, with a meta description in the excerpt and question-led FAQs). They share `dc_demo_service_page()` in `inc/demo-services.php`.
 9. **Footer credit, second review and homepage FAQs (8 November):** "Website by glasshouse.design" in the footer, the Ladds' garage conversion review on the Conversions page, and answers for the homepage FAQs.
 10. **Privacy policy, favicon and legal footer (8 November):** a UK GDPR privacy policy, a favicon made from the DC mark, and the registered name, number and office in the footer as the trading disclosure rules require.
-11. **Workflow:** Jon's Local site is a git clone of this repository on `service-pages`, updated with `git pull`. See `WORKFLOW.md`.
+11. **Contact page merged, Gravity Forms automated (8 November):** the `contact-page` branch is merged into `service-pages`. With Gravity Forms installed and activated, running D&C setup builds the quote form and adds it to the Contact page; without it, the built-in form is used.
+12. **Workflow:** Jon's Local site is a git clone of this repository on `service-pages`, updated with `git pull`. See `WORKFLOW.md`.
 
 ## Branches
 
