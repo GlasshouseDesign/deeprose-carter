@@ -175,7 +175,7 @@ function dc_demo_service_extensions( $post_id, $m, $shared ) {
 /**
  * Build a service page from a content array, in the same section order as Extensions.
  *
- * Keys: excerpt, hero, detail, options, gallery (optional), process, faqs, contact.
+ * Keys: excerpt, hero, detail, options, gallery (optional), testimonial (optional, replaces the shared review), process, faqs, contact.
  *
  * @param int   $post_id Service post ID.
  * @param array $m       Demo media IDs keyed by file name.
@@ -241,7 +241,7 @@ function dc_demo_service_page( $post_id, $m, $shared, $c ) {
 		);
 	}
 
-	$sections[] = $shared['testimonial'];
+	$sections[] = $c['testimonial'] ?? $shared['testimonial'];
 	$sections[] = array(
 		'acf_fc_layout' => 'process',
 		'eyebrow'       => 'How it works',
@@ -411,6 +411,15 @@ function dc_demo_service_conversions( $post_id, $m, $shared ) {
 				'eyebrow'      => 'Conversions in Chippenham & North Wiltshire',
 				'heading'      => 'Loft & garage conversions',
 				'text'         => 'Turn an unused loft or garage into a bedroom, home office or living space, with the structure, approvals and finish managed from start to finish by Josh and Callum.',
+			),
+			'testimonial' => array(
+				'acf_fc_layout' => 'testimonial',
+				'eyebrow'       => 'Client story',
+				'pull_quote'    => 'Super tidy and lovely to have around the house.',
+				'body'          => '<p>We recently had our garage converted by Josh and Calum and I was super impressed by their work. They were super tidy and lovely to have around the house. The team kept us well informed and I would recommend them to anyone. Thank you all!</p>',
+				'name'          => 'Jon & Amy Ladd',
+				'project'       => 'Garage conversion',
+				'link'          => $shared['testimonial']['link'] ?? '',
 			),
 			'detail'  => array(
 				'eyebrow' => 'Conversions',

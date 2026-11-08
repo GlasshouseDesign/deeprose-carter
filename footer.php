@@ -48,7 +48,8 @@ if ( empty( $dc_button['url'] ) ) {
 	</div>
 	<div class="fbase">
 		<span>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?><?php echo dc_setting( 'company_details' ) ? ' · ' . esc_html( dc_setting( 'company_details' ) ) : ''; ?></span>
-		<span class="legal"><?php echo str_replace( '</a><a', '</a> · <a', dc_menu_links( 'footer-legal' ) ); // phpcs:ignore ?></span>
+		<?php $dc_legal = str_replace( '</a><a', '</a> · <a', dc_menu_links( 'footer-legal' ) ); ?>
+		<span class="legal"><?php echo $dc_legal ? $dc_legal . ' · ' : ''; // phpcs:ignore ?><?php esc_html_e( 'Website by', 'deeprose-carter' ); ?> <a href="https://glasshouse.design" target="_blank" rel="noopener">glasshouse.design</a></span>
 	</div>
 </div></footer>
 

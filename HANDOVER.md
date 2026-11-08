@@ -29,7 +29,8 @@ Last updated: 8 November 2026.
 6. **Service pages:** five new layouts and the full Extensions page (branch `service-pages`). Client review copy with [CHECK] points was supplied as "Extensions - copy for review.md".
 7. **Client revisions (8 November):** smaller hero card, the new intro line, £10M public liability cover, Mile Elm renamed to Calne with the full renovation described, company number 12007910, and three new orangery photos in the Extensions gallery. A `contact-page` branch with a quote form also exists on GitHub, made in another session and not yet merged.
 8. **The other six service pages (8 November):** Kitchens, Loft & Garage Conversions, Renovations, Structural Alterations, Groundworks & Landscaping and New Builds, written for local SEO (each about 1,000 words, with a meta description in the excerpt and question-led FAQs). They share `dc_demo_service_page()` in `inc/demo-services.php`.
-9. **Workflow:** Jon's Local site is a git clone of this repository on `service-pages`, updated with `git pull`. See `WORKFLOW.md`.
+9. **Footer credit, second review and homepage FAQs (8 November):** "Website by glasshouse.design" in the footer, the Ladds' garage conversion review on the Conversions page, and answers for the homepage FAQs.
+10. **Workflow:** Jon's Local site is a git clone of this repository on `service-pages`, updated with `git pull`. See `WORKFLOW.md`.
 
 ## Branches
 
@@ -73,7 +74,7 @@ In order:
 
 ## Open questions for the client
 
-- Callum or Calum?
+- Callum or Calum? Both reviews say Calum. Reviews keep the customer's spelling either way.
 - Is jo@jdeeprosedevelopments.co.uk staying or moving to a new domain?
 - Real figures: years' experience and projects completed.
 - Accreditations and memberships to show.

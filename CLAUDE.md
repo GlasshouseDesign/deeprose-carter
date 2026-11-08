@@ -51,6 +51,9 @@ Changes the client has asked for, which are already done:
 - The Mile Elm project is now in Calne and described as a full top-to-bottom renovation inside and out, with the extension.
 - Company number 12007910 is in Site Settings (footer text).
 - Three new orangery-style extension photos (`demo/img/orangery-*.jpg`) are in the Extensions gallery.
+- The footer credit reads "Website by glasshouse.design", linking to https://glasshouse.design. It is set in `footer.php`, not in Site Settings.
+- A second review, from Jon & Amy Ladd (garage conversion), is on the Conversions page. A service can replace the shared review with its own `testimonial` key.
+- The homepage FAQ answers are written, using details already confirmed (£10M cover, free quotes, no timescales).
 
 ## How the theme works
 
