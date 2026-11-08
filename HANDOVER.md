@@ -32,16 +32,16 @@ Last updated: 8 November 2026.
 9. **Footer credit, second review and homepage FAQs (8 November):** "Website by glasshouse.design" in the footer, the Ladds' garage conversion review on the Conversions page, and answers for the homepage FAQs.
 10. **Privacy policy, favicon and legal footer (8 November):** a UK GDPR privacy policy, a favicon made from the DC mark, and the registered name, number and office in the footer as the trading disclosure rules require.
 11. **Contact page merged, Gravity Forms automated (8 November):** the `contact-page` branch is merged into `service-pages`. With Gravity Forms installed and activated, running D&C setup builds the quote form and adds it to the Contact page; without it, the built-in form is used.
-12. **Workflow:** Jon's Local site is a git clone of this repository on `service-pages`, updated with `git pull`. See `WORKFLOW.md`.
+12. **Workflow:** Jon's Local site is a git clone of this repository, now on `main`, updated with `git pull`. See `WORKFLOW.md`.
 
 ## Branches
 
 | Branch | Contents |
 |---|---|
-| `main` | The approved homepage build. |
-| `service-pages` | Everything on `main` plus the service layouts, the Extensions content, `WORKFLOW.md` and this file. |
+| `main` | Everything: the homepage, all seven service pages, the Contact page and quote form, the privacy policy and the favicon. Cloudways deploys from `main`, and Jon's Local site should be on `main`. |
+| `service-pages`, `contact-page` | Old work branches, both fully merged into `main` on 8 November. They can be deleted. |
 
-Recommendation given to Jon, awaiting a yes: merge `service-pages` into `main`, point Cloudways at `main`, and do future work on short-lived branches that are merged once approved.
+Agreed with Jon (8 November): `main` is the version the client sees. Do new work on a short-lived branch, then merge it into `main` once Jon approves it.
 
 ## Deploying to Cloudways via Git
 
@@ -66,7 +66,7 @@ Status: steps explained to Jon; not yet confirmed as working.
 
 In order:
 
-1. **Confirm the Cloudways deployment works**, and get a yes on merging `service-pages` into `main`.
+1. **Set up Cloudways from `main`** and confirm it works: Git deployment, ACF PRO, Gravity Forms, the D&C setup, the staging domain added to the Adobe Fonts kit, search engines discouraged, an SMTP plugin and a test quote.
 2. **Send the Extensions page to the client** with the review copy and collect the [CHECK] answers.
 3. **Contact page and quote form.** Still waiting to hear whether Jon has Gravity Forms or WPForms (or build it to suit either). It should send to the quote email and accept photo uploads.
 4. **Project page design**, then the **About page**, then blog listing and article refinements.

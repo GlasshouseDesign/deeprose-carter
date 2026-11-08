@@ -25,10 +25,10 @@ Start a Claude Code session in the Claude Desktop app, opened on this folder. It
 
 ## Branches
 
-- `main`: the approved homepage build
-- `service-pages`: service page work, starting with Extensions
+- `main`: the current site, and what Cloudways deploys. Keep your Local site on `main`.
+- New work happens on a short-lived branch and is merged into `main` once approved.
 
-To switch branch from this folder, run `git checkout main` or `git checkout service-pages`.
+To switch this folder to `main`, run `git checkout main`, then `git pull`.
 
 ## If something goes wrong
 
