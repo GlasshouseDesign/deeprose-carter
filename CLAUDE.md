@@ -54,6 +54,10 @@ Changes the client has asked for, which are already done:
 - The footer credit reads "Website by glasshouse.design", linking to https://glasshouse.design. It is set in `footer.php`, not in Site Settings.
 - A second review, from Jon & Amy Ladd (garage conversion), is on the Conversions page. A service can replace the shared review with its own `testimonial` key.
 - The homepage FAQ answers are written, using details already confirmed (£10M cover, free quotes, no timescales).
+- Privacy policy written for UK GDPR (`inc/demo-privacy.php`), set as the WordPress privacy page by the D&C setup.
+- Favicon from the DC mark on a cream tile (`assets/icons/`), output by `dc_favicon()` unless a Site Icon is set in the Customiser.
+- Footer company details carry the legal disclosures: Deeprose and Carter Developments Ltd (renamed from J Deeprose Developments Ltd in August 2026), company no. 12007910, registered office The Old Post Office, 41-43 Market Place, Chippenham, SN15 3HR.
+- Bump `DC_VERSION` in `functions.php` whenever CSS or JS changes, so browsers and Cloudways caches pick up the new files.
 
 ## How the theme works
 

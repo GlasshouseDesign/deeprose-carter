@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'DC_VERSION', '1.0.0' );
+define( 'DC_VERSION', '1.1.0' );
 define( 'DC_DIR', get_template_directory() );
 define( 'DC_URI', get_template_directory_uri() );
 
@@ -16,6 +16,7 @@ require DC_DIR . '/inc/content-types.php';
 require DC_DIR . '/inc/acf.php';
 require DC_DIR . '/inc/demo-setup.php';
 require DC_DIR . '/inc/demo-services.php';
+require DC_DIR . '/inc/demo-privacy.php';
 
 /**
  * Theme supports, menus and image sizes.
@@ -54,6 +55,22 @@ function dc_assets() {
 	wp_enqueue_script( 'dc-site', DC_URI . '/assets/js/site.js', array(), DC_VERSION, array( 'strategy' => 'defer', 'in_footer' => true ) );
 }
 add_action( 'wp_enqueue_scripts', 'dc_assets' );
+
+/**
+ * Favicon from the logo mark. A Site Icon set in Appearance > Customise takes over.
+ */
+function dc_favicon() {
+	if ( has_site_icon() ) {
+		return;
+	}
+	$dir = DC_URI . '/assets/icons/';
+	printf( '<link rel="icon" href="%s" sizes="48x48">' . "\n", esc_url( $dir . 'favicon.ico' ) );
+	printf( '<link rel="icon" href="%s" type="image/svg+xml">' . "\n", esc_url( $dir . 'favicon.svg' ) );
+	printf( '<link rel="icon" href="%s" type="image/png" sizes="192x192">' . "\n", esc_url( $dir . 'icon-192.png' ) );
+	printf( '<link rel="apple-touch-icon" href="%s">' . "\n", esc_url( $dir . 'apple-touch-icon.png' ) );
+}
+add_action( 'wp_head', 'dc_favicon' );
+add_action( 'admin_head', 'dc_favicon' );
 
 /**
  * Preconnect to Adobe Fonts.

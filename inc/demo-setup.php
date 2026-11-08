@@ -462,7 +462,7 @@ function dc_demo_run() {
 		'field_dc_set_strapline'      => 'Built around you',
 		'field_dc_set_footer_text'    => 'Owner-managed builders based in Chippenham, working across North Wiltshire.',
 		'field_dc_set_social'         => array( array( 'label' => 'Facebook', 'url' => 'https://www.facebook.com/JDeeprosedevelopmentsltd' ) ),
-		'field_dc_set_company'        => 'Registered in England & Wales · Company no. 12007910',
+		'field_dc_set_company'        => 'Deeprose and Carter Developments Ltd · Registered in England & Wales, company no. 12007910 · Registered office: The Old Post Office, 41-43 Market Place, Chippenham, SN15 3HR',
 		'field_dc_set_fonts_kit'      => 'jtl2yxi',
 	);
 	foreach ( $settings as $key => $value ) {
@@ -471,7 +471,7 @@ function dc_demo_run() {
 	$log[] = 'Site Settings filled in (the phone number is a placeholder).';
 
 	// Menus.
-	$privacy = (int) get_option( 'wp_page_for_privacy_policy' );
+	$privacy = dc_demo_privacy_policy();
 	dc_demo_menu_build( 'Header left', 'primary-left', array(
 		array( 'title' => 'Services', 'archive' => 'service' ),
 		array( 'title' => 'Projects', 'archive' => 'project' ),
@@ -499,8 +499,7 @@ function dc_demo_run() {
 		array( 'title' => 'Contact', 'object_id' => $contact ),
 	) );
 	$legal = array();
-	if ( $privacy && get_post( $privacy ) ) {
-		wp_update_post( array( 'ID' => $privacy, 'post_status' => 'publish' ) );
+	if ( $privacy ) {
 		$legal[] = array( 'title' => 'Privacy', 'object_id' => $privacy );
 	}
 	dc_demo_menu_build( 'Footer legal', 'footer-legal', $legal );

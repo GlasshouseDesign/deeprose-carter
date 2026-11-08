@@ -30,7 +30,8 @@ Last updated: 8 November 2026.
 7. **Client revisions (8 November):** smaller hero card, the new intro line, £10M public liability cover, Mile Elm renamed to Calne with the full renovation described, company number 12007910, and three new orangery photos in the Extensions gallery. A `contact-page` branch with a quote form also exists on GitHub, made in another session and not yet merged.
 8. **The other six service pages (8 November):** Kitchens, Loft & Garage Conversions, Renovations, Structural Alterations, Groundworks & Landscaping and New Builds, written for local SEO (each about 1,000 words, with a meta description in the excerpt and question-led FAQs). They share `dc_demo_service_page()` in `inc/demo-services.php`.
 9. **Footer credit, second review and homepage FAQs (8 November):** "Website by glasshouse.design" in the footer, the Ladds' garage conversion review on the Conversions page, and answers for the homepage FAQs.
-10. **Workflow:** Jon's Local site is a git clone of this repository on `service-pages`, updated with `git pull`. See `WORKFLOW.md`.
+10. **Privacy policy, favicon and legal footer (8 November):** a UK GDPR privacy policy, a favicon made from the DC mark, and the registered name, number and office in the footer as the trading disclosure rules require.
+11. **Workflow:** Jon's Local site is a git clone of this repository on `service-pages`, updated with `git pull`. See `WORKFLOW.md`.
 
 ## Branches
 
@@ -83,6 +84,7 @@ In order:
 - Service page [CHECK] points: do they supply kitchens or fit the client's own; fire, flood and insurance work (Renovations and Structural), including subsidence repairs; which driveway and patio materials they lay (resin-bound, porcelain, block paving), and whether they turf and build pergolas; timber frame, small developments and commercial new builds; and annexes under Conversions.
 - Photos needed: any loft or garage conversion (the page uses the team photo for now), and more new builds than Biddestone, so those two pages can have galleries.
 - More reviews, ideally one per service: every service page currently reuses Joe Davies's review.
+- Privacy policy points to confirm: retention periods (2 years for enquiries that do not go ahead, 6 years for financial records, 12 years for project records), that they never send marketing emails, that client photos are only used with permission, and whether they have paid the ICO data protection fee (most small businesses that hold customer data must).
 
 ## Files outside the repository
 
