@@ -175,7 +175,7 @@ function dc_demo_run() {
 		'garden-terrace'       => 'Garden terrace with oak pergola',
 		'hallway-stairs'       => 'Hallway with oak staircase and stone floor',
 		'utility-room'         => 'Utility room with arched steel door',
-		'arched-shower'        => 'Arched tiled shower',
+		'arched-shower'        => 'Arched larder',
 		'rendered-extension'   => 'Rendered extension with stone quoins',
 		'stone-wall-extension' => 'Stone extension wall with roof lights',
 		'orangery-dusk'        => 'Orangery-style extension with glazed doors on to a stone terrace',
@@ -190,7 +190,7 @@ function dc_demo_run() {
 	}
 	$m['loop-webm']  = dc_demo_media( 'video/dc-hero-loop.webm' );
 	$m['loop-mp4']   = dc_demo_media( 'video/dc-hero-loop.mp4' );
-	$m['brand-film'] = dc_demo_media( 'video/dc-brand-film.mp4' );
+	$m['brand-film'] = dc_demo_media( 'video/dc-brand-film-calne.mp4' );
 	$log[]           = sprintf( '%d media files in the Media Library.', count( array_filter( $m ) ) );
 
 	// Services.
@@ -295,8 +295,8 @@ function dc_demo_run() {
 			'strong_text'   => 'You bring us the idea, we take care of the rest.',
 			'link'          => dc_demo_link( get_permalink( $about ), 'Our philosophy' ),
 			'stats'         => array(
-				array( 'value' => 'XX+', 'label' => "Years' combined experience" ),
-				array( 'value' => 'XXX+', 'label' => 'Projects completed' ),
+				array( 'value' => '35+', 'label' => "Years' combined experience" ),
+				array( 'value' => '100+', 'label' => 'Projects completed' ),
 				array( 'value' => '£10M', 'label' => 'Public liability cover' ),
 				array( 'value' => '2', 'label' => 'Owners on every build' ),
 			),
@@ -354,7 +354,7 @@ function dc_demo_run() {
 			'images'        => array(
 				array( 'image' => $m['hallway-stairs'], 'caption' => 'Hallway & staircase' ),
 				array( 'image' => $m['utility-room'], 'caption' => 'Utility room' ),
-				array( 'image' => $m['arched-shower'], 'caption' => 'Arched shower' ),
+				array( 'image' => $m['arched-shower'], 'caption' => 'Arched larder' ),
 				array( 'image' => $m['kitchen-island'], 'caption' => 'Kitchen island' ),
 			),
 		),

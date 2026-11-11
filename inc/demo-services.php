@@ -583,7 +583,7 @@ function dc_demo_service_renovations( $post_id, $m, $shared ) {
 					'hallway-stairs'   => 'Hallway and oak staircase, Calne',
 					'utility-room'     => 'Utility room, Calne',
 					'kitchen-marble'   => 'Kitchen-diner',
-					'arched-shower'    => 'Arched opening and plasterwork, Calne',
+					'arched-shower'    => 'Arched larder, Calne',
 					'stone-house'      => 'Period stone house',
 				),
 			),

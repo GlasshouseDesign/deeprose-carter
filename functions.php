@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'DC_VERSION', '1.4.0' );
+define( 'DC_VERSION', '1.5.0' );
 define( 'DC_DIR', get_template_directory() );
 define( 'DC_URI', get_template_directory_uri() );
 

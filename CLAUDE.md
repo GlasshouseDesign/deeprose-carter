@@ -48,6 +48,9 @@ Changes the client has asked for, which are already done:
 - The name tiles in the Team section were removed.
 - The hero card is a little smaller (552px wide, 46px headline), so more of the film shows.
 - Intro strong line: "You bring us the idea, we take care of the rest." Public liability cover: £10M.
+- The brand film's first scene label now reads "Extensions · Calne" (was Mile Elm), edited into the film itself (`demo/video/dc-brand-film-calne.mp4`) and its poster.
+- Key figures: 35+ years' combined experience, 100+ projects completed, £10M public liability cover. Figures with a number and suffix count up.
+- The photo `arched-shower.jpg` is a larder, not a shower: captioned "Arched larder, Calne".
 - The Mile Elm project is now in Calne and described as a full top-to-bottom renovation inside and out, with the extension.
 - Company number 12007910 is in Site Settings (footer text).
 - Three new orangery-style extension photos (`demo/img/orangery-*.jpg`) are in the Extensions gallery.
@@ -95,11 +98,10 @@ Changes the client has asked for, which are already done:
 4. SEO: Rank Math or Yoast, plus LocalBusiness schema.
 5. Before launch:
    - Create an Adobe Fonts web project for the live domain, and update the kit ID in Site Settings (the current `jtl2yxi` was made for the concepts).
-   - Replace the placeholders: phone number, WhatsApp, the XX figures (years' experience and projects completed), FAQ answers, the Loft & Garage Conversions photo, project write-ups and the sample blog post.
+   - Replace the placeholders: phone number, WhatsApp, FAQ answers, the Loft & Garage Conversions photo, project write-ups and the sample blog post.
    - Update the team photo: the jumpers show the old logo.
 
 ## Open questions for the client
 
 - **"Callum" or "Calum"?** The review says Calum. Use one spelling everywhere once confirmed.
 - **Email address:** is jo@jdeeprosedevelopments.co.uk staying, or moving to a new domain?
-- The real figures for years' experience and projects completed.
