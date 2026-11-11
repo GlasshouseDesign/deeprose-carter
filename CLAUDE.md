@@ -58,6 +58,7 @@ Changes the client has asked for, which are already done:
 - Favicon from the DC mark on a cream tile (`assets/icons/`), output by `dc_favicon()` unless a Site Icon is set in the Customiser.
 - Footer company details carry the legal disclosures: Deeprose and Carter Developments Ltd (renamed from J Deeprose Developments Ltd in August 2026), company no. 12007910, registered office The Old Post Office, 41-43 Market Place, Chippenham, SN15 3HR.
 - Bump `DC_VERSION` in `functions.php` whenever CSS or JS changes, so browsers and Cloudways caches pick up the new files.
+- Claude can manage the Cloudways site (https://wordpress-482306-6753843.cloudwaysapps.com) through the REST API with an Application Password (user `glasshousedesign`), saved as a network secret on Jon's Default environment, not in the repository. Core content uses `wp/v2`; the theme's admin-only `dc/v1` routes (`inc/rest.php`) read and write page sections and Site Settings, run the D&C setup and report the theme version. Theme code still reaches the site only through Git deployment.
 
 ## How the theme works
 
