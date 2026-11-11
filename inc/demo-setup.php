@@ -487,7 +487,8 @@ function dc_demo_run() {
 	// Reading settings.
 	update_option( 'show_on_front', 'page' );
 	update_option( 'page_on_front', $home );
-	update_option( 'page_for_posts', $blog );
+	// No posts page while the blog is hidden, so /blog/ is not found. To bring it back: update_option( 'page_for_posts', $blog ).
+	update_option( 'page_for_posts', 0 );
 
 	// Site Settings.
 	$settings = array(
