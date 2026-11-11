@@ -262,6 +262,41 @@
         "id": ""
       },
       "default_value": "jtl2yxi"
+    },
+    {
+      "key": "field_dc_set_tab_seo",
+      "label": "Search",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_dc_set_areas_live",
+      "label": "Area pages visible to search engines",
+      "name": "areas_live",
+      "type": "true_false",
+      "instructions": "Leave off while the area pages (Builders in Corsham and so on) are being prepared. While off, they are kept out of Google and the sitemap, and are only reached by their web address. Turn on at launch.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 0,
+      "ui": 1,
+      "ui_on_text": "Visible",
+      "ui_off_text": "Hidden"
     }
   ],
   "location": [
@@ -282,5 +317,5 @@
   "active": true,
   "description": "",
   "show_in_rest": 0,
-  "modified": 1793130705
+  "modified": 1794401863
 }

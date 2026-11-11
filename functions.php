@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'DC_VERSION', '1.3.0' );
+define( 'DC_VERSION', '1.4.0' );
 define( 'DC_DIR', get_template_directory() );
 define( 'DC_URI', get_template_directory_uri() );
 
@@ -17,6 +17,7 @@ require DC_DIR . '/inc/acf.php';
 require DC_DIR . '/inc/demo-setup.php';
 require DC_DIR . '/inc/demo-services.php';
 require DC_DIR . '/inc/demo-privacy.php';
+require DC_DIR . '/inc/demo-areas.php';
 require DC_DIR . '/inc/contact-form.php';
 require DC_DIR . '/inc/gravity-forms.php';
 require DC_DIR . '/inc/rest.php';

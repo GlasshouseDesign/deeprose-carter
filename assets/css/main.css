@@ -549,3 +549,28 @@ details .answer p+p{margin-top:12px}
 
 @media(max-width:1100px){.cf-grid{grid-template-columns:1fr;gap:48px}.cf-aside{position:static}}
 @media(max-width:900px){.cf-row{grid-template-columns:1fr}.cf-done{padding:36px 28px}.cf-submit{align-self:stretch;justify-content:center}}
+
+/* ---------- Project pages ---------- */
+/* facts strip under the overlapping card */
+.project-facts{padding:150px 0 0}
+.project-facts + .more-projects,.project-facts:has(+ .cta-band){margin-bottom:96px}
+.pfacts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pfacts > div{padding:26px 28px 26px 0}
+.pfacts > div + div{padding-left:28px;border-left:1px solid var(--line)}
+.pfacts dt{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-bottom:8px}
+.pfacts dd{margin:0;font-family:var(--trajan);font-size:17px;letter-spacing:.03em;color:var(--navy);line-height:1.4}
+.pfacts dd a{text-decoration:underline;text-decoration-color:var(--mist);text-underline-offset:4px;transition:text-decoration-color .2s}
+.pfacts dd a:hover{text-decoration-color:var(--navy)}
+.project-text{margin-top:48px}
+.more-projects{background:var(--stone)}
+.more-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.more-grid .proj{aspect-ratio:16/10}
+@media (max-width:900px){
+  .project-facts{padding:48px 0 0}
+  .pfacts dd{font-size:15px}
+  .pfacts{grid-template-columns:1fr 1fr}
+  .pfacts > div,.pfacts > div + div{padding:20px 16px 20px 0;border-left:0}
+  .pfacts > div:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
+  .pfacts > div:nth-child(n+3){border-top:1px solid var(--line)}
+  .more-grid{grid-template-columns:1fr}
+}

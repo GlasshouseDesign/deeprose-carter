@@ -58,6 +58,11 @@ Changes the client has asked for, which are already done:
 - Favicon from the DC mark on a cream tile (`assets/icons/`), output by `dc_favicon()` unless a Site Icon is set in the Customiser.
 - Footer company details carry the legal disclosures: Deeprose and Carter Developments Ltd (renamed from J Deeprose Developments Ltd in August 2026), company no. 12007910, registered office The Old Post Office, 41-43 Market Place, Chippenham, SN15 3HR.
 - Bump `DC_VERSION` in `functions.php` whenever CSS or JS changes, so browsers and Cloudways caches pick up the new files.
+- The blog is hidden for now: the blog page and sample post are drafts, and Blog is out of every menu. To bring it back, publish them and add Blog to the menus.
+- Project pages (`single-project.php`) are kept light: the framed hero with the title card (location, title, summary), a facts strip (location, the work, related services linked from the project types by `dc_project_services()`, managed by), the photo gallery with lightbox, and two more projects. A project needs only a featured image, location, summary, project types and gallery photos; the main text is optional.
+- "Request a quote" buttons (`dc_quote_mailto()`) go to the Contact page form, falling back to email only if there is no Contact page.
+- Area pages: "Builders in Chippenham", Corsham, Calne, Devizes, Malmesbury, Melksham, Royal Wootton Bassett and Bath, at `/areas/<town>/` (`inc/demo-areas.php`), each with its own local copy and FAQs. They are out of the menus and, while Site Settings → Search → "Area pages visible to search engines" is off, noindexed and left out of the sitemap (`dc_area_hidden()`, pages tagged `_dc_area`). Turn it on and link them (for example from the homepage Areas section) at launch.
+- A Reviews page is parked for now; the Reviews links still jump to the homepage review.
 - Claude can manage the Cloudways site (https://wordpress-482306-6753843.cloudwaysapps.com) through the REST API with an Application Password (user `glasshousedesign`), saved as a network secret on Jon's Default environment, not in the repository. Core content uses `wp/v2`; the theme's admin-only `dc/v1` routes (`inc/rest.php`) read and write page sections and Site Settings, run the D&C setup and report the theme version. Theme code still reaches the site only through Git deployment.
 
 ## How the theme works

@@ -80,6 +80,10 @@ function dc_tel( $phone ) {
  * The quote email link, with a subject line.
  */
 function dc_quote_mailto() {
+	$contact = get_page_by_path( 'contact' );
+	if ( $contact && 'publish' === $contact->post_status ) {
+		return get_permalink( $contact ) . '#enquiry';
+	}
 	$email = dc_setting( 'quote_email' );
 	if ( ! $email ) {
 		return home_url( '/contact/' );
@@ -203,4 +207,66 @@ function dc_project_card( $project_id, $size = 'small' ) {
 		</div>
 	</a>
 	<?php
+}
+
+/**
+ * Is this an area page (Builders in Corsham and so on) that should stay out of search engines?
+ * Area pages are tagged with the _dc_area meta and hidden until Site Settings → Search says otherwise.
+ *
+ * @param int $post_id Post ID.
+ */
+function dc_area_hidden( $post_id ) {
+	return get_post_meta( $post_id, '_dc_area', true ) && ! dc_setting( 'areas_live' );
+}
+
+/**
+ * Keep hidden area pages out of search results.
+ */
+function dc_area_robots( $robots ) {
+	if ( is_page() && dc_area_hidden( get_queried_object_id() ) ) {
+		$robots['noindex']  = true;
+		$robots['nofollow'] = true;
+	}
+	return $robots;
+}
+add_filter( 'wp_robots', 'dc_area_robots' );
+
+/**
+ * Keep hidden area pages out of the sitemap.
+ */
+function dc_area_sitemap( $args, $post_type ) {
+	if ( 'page' === $post_type && ! dc_setting( 'areas_live' ) ) {
+		$args['meta_query'] = array( array( 'key' => '_dc_area', 'compare' => 'NOT EXISTS' ) ); // phpcs:ignore WordPress.DB.SlowDBQuery
+	}
+	return $args;
+}
+add_filter( 'wp_sitemaps_posts_query_args', 'dc_area_sitemap', 10, 2 );
+
+/**
+ * Services linked to a project, matched from its project types.
+ *
+ * @param int $post_id Project ID.
+ * @return WP_Post[]
+ */
+function dc_project_services( $post_id ) {
+	$map   = array(
+		'extension'   => 'extensions',
+		'kitchen'     => 'kitchens',
+		'conversion'  => 'conversions',
+		'renovation'  => 'renovations',
+		'structural'  => 'structural',
+		'landscaping' => 'groundworks',
+		'groundworks' => 'groundworks',
+		'new-build'   => 'new-builds',
+	);
+	$slugs = array();
+	foreach ( (array) get_the_terms( $post_id, 'project_type' ) as $term ) {
+		if ( $term && isset( $map[ $term->slug ] ) ) {
+			$slugs[] = $map[ $term->slug ];
+		}
+	}
+	if ( ! $slugs ) {
+		return array();
+	}
+	return get_posts( array( 'post_type' => 'service', 'post_name__in' => array_unique( $slugs ), 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 10 ) );
 }

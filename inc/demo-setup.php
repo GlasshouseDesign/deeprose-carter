@@ -51,7 +51,7 @@ function dc_demo_page() {
 		<?php if ( ! $acf ) : ?>
 			<div class="notice notice-error inline"><p><?php esc_html_e( 'Install and activate Advanced Custom Fields PRO first, then come back to this page.', 'deeprose-carter' ); ?></p></div>
 		<?php else : ?>
-			<p style="max-width:720px"><?php esc_html_e( 'This imports the photos and films into the Media Library, creates the Home, About, Contact and Blog pages, the seven services, three projects and a sample blog post, fills in Site Settings, sets up the menus and makes Home the front page.', 'deeprose-carter' ); ?></p>
+			<p style="max-width:720px"><?php esc_html_e( 'This imports the photos and films into the Media Library, creates the Home, About and Contact pages, the seven services and their area pages, three projects, a hidden blog page and sample post, fills in Site Settings, sets up the menus and makes Home the front page.', 'deeprose-carter' ); ?></p>
 			<p style="max-width:720px"><?php esc_html_e( 'It is safe to run again: it updates the items it created before rather than duplicating them. Anything you have edited in those items will be overwritten.', 'deeprose-carter' ); ?></p>
 			<form method="post">
 				<?php wp_nonce_field( 'dc_run_setup' ); ?>
@@ -224,7 +224,7 @@ function dc_demo_run() {
 	);
 	$projects = array();
 	foreach ( $projects_data as $p ) {
-		$id = dc_demo_post( 'project-' . $p[0], array( 'post_type' => 'project', 'post_title' => $p[1], 'post_name' => $p[0], 'post_content' => '<!-- wp:paragraph --><p>' . esc_html( $p[5] ) . ' Full project write-up to come.</p><!-- /wp:paragraph -->' ) );
+		$id = dc_demo_post( 'project-' . $p[0], array( 'post_type' => 'project', 'post_title' => $p[1], 'post_name' => $p[0], 'post_content' => '' ) );
 		wp_set_object_terms( $id, $p[3], 'project_type' );
 		set_post_thumbnail( $id, $m[ $p[4] ] );
 		update_field( 'field_dc_prj_location', $p[2], $id );
@@ -237,7 +237,8 @@ function dc_demo_run() {
 	// Pages.
 	$contact = dc_demo_post( 'page-contact', array( 'post_type' => 'page', 'post_title' => 'Contact', 'post_name' => 'contact' ) );
 	$about   = dc_demo_post( 'page-about', array( 'post_type' => 'page', 'post_title' => 'About', 'post_name' => 'about' ) );
-	$blog    = dc_demo_post( 'page-blog', array( 'post_type' => 'page', 'post_title' => 'News & advice', 'post_name' => 'blog' ) );
+	// The blog is hidden for now: the page and sample post are drafts and are left out of the menus.
+	$blog    = dc_demo_post( 'page-blog', array( 'post_type' => 'page', 'post_title' => 'News & advice', 'post_name' => 'blog', 'post_status' => 'draft' ) );
 	$home    = dc_demo_post( 'page-home', array( 'post_type' => 'page', 'post_title' => 'Home', 'post_name' => 'home' ) );
 
 	$contact_url = get_permalink( $contact );
@@ -392,6 +393,9 @@ function dc_demo_run() {
 	dc_demo_service_new_builds( $services['new-builds'], $m, $service_shared );
 	$log[] = 'All seven service pages built.';
 
+	$areas = dc_demo_areas( $m, $service_shared, $services );
+	$log[] = sprintf( '%d area pages built at /areas/, hidden from menus and search engines.', count( $areas ) );
+
 	update_field(
 		'field_dc_sections',
 		array(
@@ -466,10 +470,11 @@ function dc_demo_run() {
 			'post_excerpt'  => 'A placeholder article showing how blog posts look. Replace it with a real one.',
 			'post_content'  => "<!-- wp:paragraph --><p>This is a sample post so you can see how articles look. Replace it with a real one, or delete it.</p><!-- /wp:paragraph --><!-- wp:heading --><h2 class=\"wp-block-heading\">Start with a clear brief</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Before any drawings, think about how you want to use the space, the budget, and when you would like the work done.</p><!-- /wp:paragraph --><!-- wp:quote --><blockquote class=\"wp-block-quote\"><!-- wp:paragraph --><p>A well-run build makes all the difference.</p><!-- /wp:paragraph --></blockquote><!-- /wp:quote -->",
 			'post_category' => array( $cat ),
+			'post_status'   => 'draft',
 		)
 	);
 	set_post_thumbnail( $post, $m['extension-bifold'] );
-	$log[] = 'Sample blog post created.';
+	$log[] = 'Sample blog post saved as a draft (the blog is hidden for now).';
 
 	// Remove the WordPress starter content.
 	foreach ( array( array( 'hello-world', 'post' ), array( 'sample-page', 'page' ) ) as $starter ) {
@@ -509,7 +514,6 @@ function dc_demo_run() {
 		array( 'title' => 'Services', 'archive' => 'service' ),
 		array( 'title' => 'Projects', 'archive' => 'project' ),
 		array( 'title' => 'About', 'object_id' => $about ),
-		array( 'title' => 'Blog', 'object_id' => $blog ),
 	) );
 	dc_demo_menu_build( 'Header right', 'primary-right', array(
 		array( 'title' => 'Reviews', 'url' => home_url( '/#reviews' ) ),
@@ -519,14 +523,12 @@ function dc_demo_run() {
 		array( 'title' => 'Projects', 'archive' => 'project' ),
 		array( 'title' => 'About', 'object_id' => $about ),
 		array( 'title' => 'Reviews', 'url' => home_url( '/#reviews' ) ),
-		array( 'title' => 'Blog', 'object_id' => $blog ),
 		array( 'title' => 'Contact', 'object_id' => $contact ),
 	) );
 	dc_demo_menu_build( 'Footer services', 'footer-services', array_map( fn( $id ) => array( 'title' => get_the_title( $id ), 'object_id' => $id ), array_values( $services ) ) );
 	dc_demo_menu_build( 'Footer company', 'footer-company', array(
 		array( 'title' => 'About us', 'object_id' => $about ),
 		array( 'title' => 'Projects', 'archive' => 'project' ),
-		array( 'title' => 'Blog', 'object_id' => $blog ),
 		array( 'title' => 'Reviews', 'url' => home_url( '/#reviews' ) ),
 		array( 'title' => 'FAQs', 'url' => home_url( '/#faqs' ) ),
 		array( 'title' => 'Contact', 'object_id' => $contact ),
