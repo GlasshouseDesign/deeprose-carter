@@ -178,6 +178,7 @@ function dc_demo_run() {
 		'arched-shower'        => 'Arched larder',
 		'rendered-extension'   => 'Rendered extension with stone quoins',
 		'stone-wall-extension' => 'Stone extension wall with roof lights',
+		'extension-drawing'    => 'Drawing of a single-storey stone extension: front elevation and ground floor plan',
 		'orangery-dusk'        => 'Orangery-style extension with glazed doors on to a stone terrace',
 		'orangery-terrace'     => 'Orangery-style extension on a stone cottage',
 		'orangery-front-door'  => 'Orangery-style extension with a new front door and stone surround',
@@ -405,7 +406,7 @@ function dc_demo_run() {
 				'heading'       => 'A better way to build',
 				'body'          => '<p>Founded in 2019 as J Deeprose Developments Ltd, the business was built around a simple idea: to offer homeowners a dependable building service with the same high standards, attention to detail and pride in workmanship that you would expect for yourself.</p><p>With a new name but the same core values, Deeprose &amp; Carter Developments continues with the same belief: that a successful project is about more than just the finished result.</p><p>Good communication, thoughtful planning, quality workmanship and having a team you can trust in your home are at the heart of every project we undertake. Those values continue to shape the way we work, from start to finish.</p>',
 			),
-			$team_row,
+			array_merge( $team_row, array( 'image' => $m['extension-drawing'] ) ),
 			$cta_row,
 		),
 		$about
