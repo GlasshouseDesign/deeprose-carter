@@ -106,7 +106,34 @@ function dc_gf_quote_form( $to ) {
 		$id     = is_wp_error( $result ) ? 0 : (int) $result;
 		update_option( 'dc_gf_quote_form', $id );
 	}
-	return is_wp_error( $result ) ? 0 : $id;
+	if ( is_wp_error( $result ) || ! $id ) {
+		return 0;
+	}
+	// Updating a form can leave it inactive, which makes the shortcode print nothing.
+	GFAPI::update_form_property( $id, 'is_active', 1 );
+	GFAPI::update_form_property( $id, 'is_trash', 0 );
+	return $id;
+}
+
+/**
+ * State of the quote form, for checking a deployment through the API.
+ */
+function dc_gf_status() {
+	$id = (int) get_option( 'dc_gf_quote_form' );
+	if ( ! class_exists( 'GFAPI' ) || ! $id ) {
+		return array( 'id' => $id, 'active_plugin' => class_exists( 'GFAPI' ) );
+	}
+	$form = GFAPI::get_form( $id );
+	$html = do_shortcode( '[gravityform id="' . $id . '" title="false" description="false"]' );
+	return array(
+		'id'          => $id,
+		'found'       => (bool) $form,
+		'is_active'   => $form ? (int) rgar( $form, 'is_active' ) : null,
+		'is_trash'    => $form ? (int) rgar( $form, 'is_trash' ) : null,
+		'fields'      => $form ? array_map( fn( $f ) => $f->id . ' ' . $f->type . ' ' . $f->label, $form['fields'] ) : array(),
+		'renders'     => false !== strpos( $html, '<form' ),
+		'html_sample' => wp_strip_all_tags( substr( $html, 0, 300 ) ),
+	);
 }
 
 /**

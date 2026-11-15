@@ -82,7 +82,7 @@ function dc_rest_routes() {
 		array(
 			'methods'             => 'GET',
 			'permission_callback' => $admin,
-			'callback'            => fn() => array( 'version' => DC_VERSION, 'gravity_forms' => class_exists( 'GFAPI' ) ),
+			'callback'            => fn() => array( 'version' => DC_VERSION, 'gravity_forms' => class_exists( 'GFAPI' ), 'quote_form' => function_exists( 'dc_gf_status' ) ? dc_gf_status() : null ),
 		)
 	);
 }

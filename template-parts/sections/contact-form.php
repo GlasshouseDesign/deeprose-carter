@@ -21,8 +21,10 @@ $dc_address   = dc_setting( 'address' );
 		<?php if ( get_sub_field( 'intro' ) ) : ?><p class="lede"><?php echo esc_html( get_sub_field( 'intro' ) ); ?></p><?php endif; ?>
 		<div class="cf-box">
 			<?php
-			if ( $dc_shortcode ) {
-				echo do_shortcode( $dc_shortcode ); // phpcs:ignore WordPress.Security.EscapeOutput -- form plugin output.
+			// Fall back to the built-in form if the plugin returns no form (inactive, deleted or broken).
+			$dc_form = $dc_shortcode ? do_shortcode( $dc_shortcode ) : '';
+			if ( false !== strpos( $dc_form, '<form' ) ) {
+				echo $dc_form; // phpcs:ignore WordPress.Security.EscapeOutput -- form plugin output.
 			} else {
 				dc_cf_render();
 			}
