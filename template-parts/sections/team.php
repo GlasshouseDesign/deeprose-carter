@@ -7,7 +7,7 @@
 
 ?>
 <section class="team pad" id="about"><div class="wrap"><div class="grid">
-	<?php if ( get_sub_field( 'image' ) ) : ?><div class="photo"><?php echo dc_img( get_sub_field( 'image' ), 'dc-wide', array( 'loading' => 'lazy' ) ); // phpcs:ignore ?></div><?php endif; ?>
+	<?php if ( get_sub_field( 'image' ) ) : ?><div class="photo"><?php echo dc_img( get_sub_field( 'image' ), 'large', array( 'loading' => 'lazy' ) ); // phpcs:ignore ?></div><?php endif; ?>
 	<div>
 		<?php dc_eyebrow( get_sub_field( 'eyebrow' ) ); ?>
 		<h2><?php echo esc_html( get_sub_field( 'heading' ) ); ?></h2>

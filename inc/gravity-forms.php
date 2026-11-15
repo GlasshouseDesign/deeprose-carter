@@ -59,6 +59,9 @@ function dc_gf_quote_form( $to ) {
 
 	$form = array(
 		'title'          => 'Request a quote',
+		// GFAPI::update_form() saves is_active from the form itself, so leaving it out switched the form off.
+		'is_active'      => true,
+		'is_trash'       => false,
 		'description'    => '',
 		'labelPlacement' => 'top_label',
 		'markupVersion'  => 2,
@@ -109,9 +112,10 @@ function dc_gf_quote_form( $to ) {
 	if ( is_wp_error( $result ) || ! $id ) {
 		return 0;
 	}
-	// Updating a form can leave it inactive, which makes the shortcode print nothing.
-	GFAPI::update_form_property( $id, 'is_active', 1 );
-	GFAPI::update_form_property( $id, 'is_trash', 0 );
+	// Belt and braces: make sure the form is switched on, or the shortcode prints nothing.
+	if ( class_exists( 'GFFormsModel' ) ) {
+		GFFormsModel::update_form_active( $id, true );
+	}
 	return $id;
 }
 
