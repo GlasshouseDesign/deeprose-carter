@@ -64,8 +64,8 @@ function dc_demo_service_extensions( $post_id, $m, $shared ) {
 					'<p>An extension is one of the best ways to add space and value to your home without the cost and upheaval of moving. Whether you want a bright kitchen-diner opening on to the garden, an extra bedroom, a home office or a larger family room, Deeprose &amp; Carter Developments design and build <strong>house extensions across Chippenham, Corsham, Calne, Malmesbury, Melksham</strong> and the surrounding North Wiltshire villages.</p>',
 					'<p>Every extension is overseen by the owners, Josh and Callum, from the first site visit to the final handover. You have one point of contact throughout, supported by a carefully selected team of trusted trades working to the same high standard.</p>',
 					'<h2>Planning, building regulations and design</h2>',
-					'<p>We can build from your own architect\'s drawings or introduce you to designers we trust. Many single storey rear extensions can be built under <strong>permitted development</strong>, while larger, two storey and wrap-around designs usually need <strong>planning permission</strong>. We will tell you honestly what is likely to be needed for your home and help with the paperwork.</p>',
-					'<p>Every extension needs <strong>building regulations approval</strong>. We arrange and manage building control inspections throughout the build, coordinate the structural engineer\'s calculations, and handle <strong>party wall</strong> arrangements with neighbours where they apply.</p>',
+					'<p>We can build from your own architect\'s drawings or introduce you to designers we trust. Many single storey rear extensions can be built under <strong>permitted development</strong>, while larger, two storey and wrap-around designs usually need <strong>planning permission</strong>. We will tell you honestly what is likely to be needed for your home.</p>',
+					'<p>Every extension needs <strong>building regulations approval</strong>. We arrange and manage building control inspections throughout the build, coordinate the structural engineer\'s calculations, and advise on <strong>party wall</strong> agreements with neighbours where they apply.</p>',
 					'<h2>An extension that suits your home</h2>',
 					'<p>Many homes in North Wiltshire are built in Bath stone, Cotswold stone or brick, and some are listed or sit in conservation areas. We take care to match the stone, coursing, roof tiles and detailing so a new extension sits naturally with the original house, whether you want a traditional finish or a contemporary glazed design with steel-framed doors.</p>',
 					'<h3>Warm, efficient and built to last</h3>',
@@ -85,7 +85,7 @@ function dc_demo_service_extensions( $post_id, $m, $shared ) {
 					'Glazed and orangery-style extensions',
 					'Architect and structural engineer coordination',
 					'Planning and building regulations support',
-					'Party wall arrangements',
+					'Advice on party wall agreements',
 					'Groundworks, drainage and foundations',
 					'Steelwork and structural openings',
 					'Bifold, sliding and steel-framed doors',
@@ -106,42 +106,14 @@ function dc_demo_service_extensions( $post_id, $m, $shared ) {
 			'show_contact'  => 1,
 		),
 		array(
-			'acf_fc_layout' => 'options_grid',
-			'eyebrow'       => 'Types of extension',
-			'heading'       => 'Which extension is right for you?',
-			'intro'         => 'The right design depends on your house, your plot and how you want to use the space. We will talk through the options at your site visit.',
-			'items'         => array(
-				array( 'image' => '', 'title' => 'Single storey rear', 'text' => 'The most popular way to create a larger kitchen, dining or family room, opening the back of the house to the garden with bifold, sliding or steel-framed doors.' ),
-				array( 'image' => '', 'title' => 'Wrap-around', 'text' => 'Extends to the side and rear in an L shape, making the most of side returns and awkward plots to create one generous open-plan space.' ),
-				array( 'image' => '', 'title' => 'Two storey', 'text' => 'Adds space upstairs and down in one build, often a larger kitchen below with an extra bedroom or en suite above. Usually needs planning permission.' ),
-				array( 'image' => '', 'title' => 'Side extension', 'text' => 'Uses the space beside the house for a utility room, boot room, cloakroom, study or a wider hallway and kitchen.' ),
-				array( 'image' => '', 'title' => 'Kitchen extension', 'text' => 'A new kitchen-diner built as part of the extension, with structural openings into the existing house and the kitchen fitted by our team.' ),
-				array( 'image' => '', 'title' => 'Glazed and orangery-style', 'text' => 'Light-filled rooms with lantern roofs and large glazed openings, built and insulated to feel part of the house all year round.' ),
-			),
-		),
-		array(
 			'acf_fc_layout' => 'photo_gallery',
 			'eyebrow'       => 'Recent work',
 			'heading'       => 'Our extensions',
-			'intro'         => 'A selection of extensions we have built across North Wiltshire. Click any photo to see it full size.',
+			'intro'         => 'A selection of extensions built across North Wiltshire. Click any photo to see it full size.',
 			'images'        => array( $m['extension-arches'], $m['orangery-dusk'], $m['extension-bifold'], $m['kitchen-marble'], $m['orangery-front-door'], $m['extension-glazed'], $m['kitchen-open-plan'], $m['orangery-terrace'], $m['rendered-extension'] ),
 			'link'          => dc_demo_link( get_post_type_archive_link( 'project' ), 'View all projects' ),
 		),
 		$shared['testimonial'],
-		array(
-			'acf_fc_layout' => 'process',
-			'eyebrow'       => 'How it works',
-			'heading'       => 'Your extension, step by step',
-			'intro'         => 'One point of contact from the first visit to the final handover.',
-			'steps'         => array(
-				array( 'title' => 'Site visit', 'text' => 'We look at the house and garden, talk through your ideas and give honest advice on what is possible.' ),
-				array( 'title' => 'Design and approvals', 'text' => 'We work with your architect and engineer, and help with planning and building regulations.' ),
-				array( 'title' => 'Quote and programme', 'text' => 'An itemised quote and a realistic schedule, so you know the cost and timings before we start.' ),
-				array( 'title' => 'The build', 'text' => 'Foundations to roof, then first fix, plastering and finishes, with Josh or Callum overseeing every stage.' ),
-				array( 'title' => 'Handover', 'text' => 'Building control sign-off, a final walk-round together and a clean, tidy site.' ),
-			),
-			'button'        => dc_demo_link( $contact, 'Contact us' ),
-		),
 		array(
 			'acf_fc_layout' => 'faqs',
 			'eyebrow'       => 'Extension FAQs',
@@ -163,7 +135,7 @@ function dc_demo_service_extensions( $post_id, $m, $shared ) {
 			'text'          => 'Tell us about your home and what you would like to achieve. Josh or Callum will arrange a free site visit and give you honest advice, with no obligation.',
 			'points'        => array_map(
 				fn( $t ) => array( 'text' => $t ),
-				array( 'Free site visit and itemised quote', 'Owner-managed from start to finish', 'Planning and building regulations support', 'Trusted, tidy and reliable trades' )
+				array( 'Free site visit and itemised quote', 'Owner-managed from start to finish', 'Planning and building regulations support', 'Trusted, respectful and reliable trades' )
 			),
 			'button'        => '',
 			'image'         => $m['team-plans'],
@@ -175,7 +147,7 @@ function dc_demo_service_extensions( $post_id, $m, $shared ) {
 /**
  * Build a service page from a content array, in the same section order as Extensions.
  *
- * Keys: excerpt, hero, detail, options, gallery (optional), testimonial (optional, replaces the shared review), process, faqs, contact.
+ * Keys: excerpt, hero, detail, options (optional), gallery (optional), testimonial (optional, replaces the shared review), process (optional), faqs, contact.
  *
  * @param int   $post_id Service post ID.
  * @param array $m       Demo media IDs keyed by file name.
@@ -214,7 +186,10 @@ function dc_demo_service_page( $post_id, $m, $shared, $c ) {
 			),
 			'show_contact'  => 1,
 		),
-		array(
+	);
+
+	if ( ! empty( $c['options'] ) ) {
+		$sections[] = array(
 			'acf_fc_layout' => 'options_grid',
 			'eyebrow'       => $c['options']['eyebrow'],
 			'heading'       => $c['options']['heading'],
@@ -224,8 +199,8 @@ function dc_demo_service_page( $post_id, $m, $shared, $c ) {
 				array_keys( $c['options']['items'] ),
 				$c['options']['items']
 			),
-		),
-	);
+		);
+	}
 
 	if ( ! empty( $c['gallery'] ) ) {
 		foreach ( $c['gallery']['captions'] as $file => $caption ) {
@@ -242,18 +217,20 @@ function dc_demo_service_page( $post_id, $m, $shared, $c ) {
 	}
 
 	$sections[] = $c['testimonial'] ?? $shared['testimonial'];
-	$sections[] = array(
-		'acf_fc_layout' => 'process',
-		'eyebrow'       => 'How it works',
-		'heading'       => $c['process']['heading'],
-		'intro'         => 'One point of contact from the first visit to the final handover.',
-		'steps'         => array_map(
-			fn( $title, $text ) => array( 'title' => $title, 'text' => $text ),
-			array_keys( $c['process']['steps'] ),
-			$c['process']['steps']
-		),
-		'button'        => dc_demo_link( $contact, 'Contact us' ),
-	);
+	if ( ! empty( $c['process'] ) ) {
+		$sections[] = array(
+			'acf_fc_layout' => 'process',
+			'eyebrow'       => 'How it works',
+			'heading'       => $c['process']['heading'],
+			'intro'         => 'One point of contact from the first visit to the final handover.',
+			'steps'         => array_map(
+				fn( $title, $text ) => array( 'title' => $title, 'text' => $text ),
+				array_keys( $c['process']['steps'] ),
+				$c['process']['steps']
+			),
+			'button'        => dc_demo_link( $contact, 'Contact us' ),
+		);
+	}
 	$sections[] = array(
 		'acf_fc_layout' => 'faqs',
 		'eyebrow'       => $c['faqs']['eyebrow'],
@@ -360,16 +337,6 @@ function dc_demo_service_kitchens( $post_id, $m, $shared ) {
 					'kitchen-island'    => 'Painted kitchen island',
 				),
 			),
-			'process' => array(
-				'heading' => 'Your kitchen, step by step',
-				'steps'   => array(
-					'Site visit'          => 'We look at the room, talk through how you use it and give honest advice on layout and structural options.',
-					'Design and supplier' => 'We work with your kitchen designer or supplier and arrange any engineer\'s calculations and approvals.',
-					'Quote and programme' => 'An itemised quote and a realistic schedule, so you know the cost and timings before we start.',
-					'The build'           => 'Strip-out, structural work, services and plastering, then floors, units, worktops and appliances.',
-					'Handover'            => 'Tiling, decoration and a final walk-round together, with building control sign-off where needed.',
-				),
-			),
 			'faqs'    => array(
 				'eyebrow' => 'Kitchen FAQs',
 				'heading' => 'Questions about kitchens',
@@ -385,7 +352,7 @@ function dc_demo_service_kitchens( $post_id, $m, $shared ) {
 			'contact' => array(
 				'heading' => 'Planning a new kitchen?',
 				'text'    => 'Tell us about your kitchen and how you would like it to work. Josh or Callum will arrange a free site visit and give you honest advice, with no obligation.',
-				'points'  => array( 'Free site visit and itemised quote', 'Owner-managed from start to finish', 'Structural work and fitting by one team', 'Trusted, tidy and reliable trades' ),
+				'points'  => array( 'Free site visit and itemised quote', 'Owner-managed from start to finish', 'Structural work and fitting by one team', 'Trusted, respectful and reliable trades' ),
 				'image'   => 'kitchen-open-plan',
 			),
 		)
@@ -393,7 +360,7 @@ function dc_demo_service_kitchens( $post_id, $m, $shared ) {
 }
 
 /**
- * Loft and garage conversions.
+ * Garage conversions.
  *
  * @param int   $post_id Service post ID.
  * @param array $m       Demo media IDs keyed by file name.
@@ -405,12 +372,12 @@ function dc_demo_service_conversions( $post_id, $m, $shared ) {
 		$m,
 		$shared,
 		array(
-			'excerpt' => 'Loft and garage conversions in Chippenham, Corsham and North Wiltshire. Extra bedrooms, offices and living space, with planning and approvals handled.',
-			'hero'    => array(
-				'image'        => 'team-plans',
-				'eyebrow'      => 'Conversions in Chippenham & North Wiltshire',
-				'heading'      => 'Loft & garage conversions',
-				'text'         => 'Turn an unused loft or garage into a bedroom, home office or living space, with the structure, approvals and finish managed from start to finish by Josh and Callum.',
+			'excerpt'     => 'Garage conversions in Chippenham, Corsham and North Wiltshire. Turn a garage into a home office, playroom, gym or bedroom, with planning and approvals handled.',
+			'hero'        => array(
+				'image'   => 'team-plans',
+				'eyebrow' => 'Garage conversions in Chippenham & North Wiltshire',
+				'heading' => 'Garage conversions',
+				'text'    => 'Turn an unused garage into a warm, bright room for working, playing or sleeping, with the structure, approvals and finish managed from start to finish by Josh and Callum.',
 			),
 			'testimonial' => array(
 				'acf_fc_layout' => 'testimonial',
@@ -421,32 +388,31 @@ function dc_demo_service_conversions( $post_id, $m, $shared ) {
 				'project'       => 'Garage conversion',
 				'link'          => $shared['testimonial']['link'] ?? '',
 			),
-			'detail'  => array(
-				'eyebrow' => 'Conversions',
+			'detail'      => array(
+				'eyebrow' => 'Garage conversions',
 				'heading' => 'Make more of the space you have',
 				'body'    => array(
-					'<p>If you need more room but do not want to move or give up the garden, a conversion is often the answer. Deeprose &amp; Carter Developments carry out <strong>loft conversions and garage conversions in Chippenham, Corsham, Calne, Malmesbury, Melksham</strong> and across North Wiltshire, creating extra bedrooms, en suites, home offices, playrooms and annexes.</p>',
+					'<p>For many homes, the garage is used for little more than storage. Converting it creates a practical ground-floor room without building an extension or giving up any of the garden. Deeprose &amp; Carter Developments carry out <strong>garage conversions in Chippenham, Corsham, Calne, Malmesbury, Melksham</strong> and across North Wiltshire.</p>',
 					'<p>Josh or Callum oversees every conversion, so you have one point of contact from the first visit to the final sign-off, and a team of trusted trades working to the same standard.</p>',
-					'<h2>Loft conversions</h2>',
-					'<p>A loft conversion adds a new room, or a whole new floor, without using any of your garden. The right type depends on the shape of your roof, the head height available and the space you want, from a simple <strong>roof light conversion</strong> to a <strong>dormer</strong> or <strong>hip-to-gable</strong> conversion that adds full-height space.</p>',
-					'<p>Many loft conversions can be built under <strong>permitted development</strong>, within limits on volume and design, while others need <strong>planning permission</strong>, particularly in conservation areas or on listed buildings. Every loft conversion needs <strong>building regulations approval</strong>, covering the structure, a safe staircase, fire protection and escape, insulation and ventilation. If you share a wall with a neighbour, the <strong>Party Wall Act</strong> may apply too. We guide you through all of it.</p>',
-					'<h2>Garage conversions</h2>',
-					'<p>An integral or attached garage is often used for little more than storage. Converting it creates a practical ground-floor room such as a home office, playroom, utility room, gym or bedroom with an en suite.</p>',
-					'<p>We fill in the garage door opening with walls and windows to match the house, insulate the floor, walls and ceiling, and add heating, lighting and power so it feels part of the home. Most garage conversions need building regulations approval, and some homes, particularly on newer estates, have conditions that mean planning permission is needed too. We will check before you commit.</p>',
+					'<h2>What a garage conversion involves</h2>',
+					'<p>We fill in the garage door opening with a wall and window to match the house, check and improve the foundations and floor, and insulate the floor, walls and ceiling. We add heating, lighting and power, and finish with plastering, flooring and decoration, so the room feels part of the home rather than an afterthought.</p>',
+					'<h2>Planning and building regulations</h2>',
+					'<p>Many garage conversions can be carried out without planning permission, but some homes, particularly on newer estates, have planning conditions that remove permitted development rights. Almost every conversion needs <strong>building regulations approval</strong>, covering insulation, ventilation, fire safety and the structure. We check what your home needs before you commit, and arrange the building control inspections.</p>',
+					'<h2>Ideas for your garage</h2>',
+					'<p>Popular uses include a home office, playroom, gym, utility and boot room, or a bedroom with an en suite. An attached garage can also be combined with a small extension for a larger space.</p>',
 				),
 				'list'    => array(
-					'Roof light, dormer and hip-to-gable lofts',
 					'Integral and attached garage conversions',
-					'Bedrooms, en suites and shower rooms',
 					'Home offices, playrooms and gyms',
+					'Bedrooms, en suites and shower rooms',
+					'Utility and boot rooms',
 					'Planning and permitted development advice',
 					'Building regulations and building control',
-					'Structural engineer coordination',
-					'Party wall arrangements',
-					'New staircases and fire protection',
-					'Steelwork and floor strengthening',
+					'Advice on party wall agreements',
+					'Infilling the garage door opening',
+					'Foundations and floor upgrades',
 					'Insulation and ventilation',
-					'Roof lights, dormers and windows',
+					'New windows and doors',
 					'Electrics, heating and plumbing',
 					'Plastering, joinery and decoration',
 				),
@@ -458,45 +424,32 @@ function dc_demo_service_conversions( $post_id, $m, $shared ) {
 					'Areas'            => 'Chippenham & North Wiltshire',
 				),
 			),
-			'options' => array(
+			'options'     => array(
 				'eyebrow' => 'Types of conversion',
 				'heading' => 'Which conversion suits your home?',
-				'intro'   => 'The best option depends on your roof, your garage and how you want to use the space. We will talk it through at your site visit.',
+				'intro'   => 'The best option depends on your garage and how you want to use the space. We will talk it through at your site visit.',
 				'items'   => array(
-					'Roof light loft'        => 'Uses the existing roof shape with roof lights added, often the simplest loft conversion where there is enough head height.',
-					'Dormer loft'            => 'A box or pitched dormer extends the roof to add full-height floor space and room for a bathroom.',
-					'Hip-to-gable loft'      => 'Builds up a sloping side of the roof into a vertical gable, opening up more usable space in many semi-detached and detached homes.',
-					'Integral garage'        => 'A garage within the footprint of the house, converted into a warm, well-lit room with a window in place of the door.',
-					'Attached garage'        => 'A garage beside the house, converted on its own or combined with an extension for a larger space.',
-					'Annexe'                 => 'A detached garage or outbuilding turned into self-contained space for family, guests or working from home. Usually needs planning permission.',
+					'Integral garage' => 'A garage within the footprint of the house, converted into a warm, well-lit room with a window in place of the door.',
+					'Attached garage' => 'A garage beside the house, converted on its own or combined with an extension for a larger space.',
+					'Detached garage' => 'A separate garage or outbuilding turned into a home office, studio or space for family and guests. Usually needs planning permission.',
 				),
 			),
-			'process' => array(
-				'heading' => 'Your conversion, step by step',
-				'steps'   => array(
-					'Site visit'           => 'We look at the loft or garage, check the head height and structure, and talk through what is possible.',
-					'Design and approvals' => 'We work with your designer and engineer and help with planning, building regulations and party wall notices.',
-					'Quote and programme'  => 'An itemised quote and a realistic schedule, so you know the cost and timings before we start.',
-					'The build'            => 'Structure, staircase, windows and insulation, then services, plastering and finishes, with Josh or Callum overseeing every stage.',
-					'Handover'             => 'Building control sign-off, a final walk-round together and a clean, tidy home.',
-				),
-			),
-			'faqs'    => array(
+			'faqs'        => array(
 				'eyebrow' => 'Conversion FAQs',
-				'heading' => 'Questions about conversions',
+				'heading' => 'Questions about garage conversions',
 				'items'   => array(
-					'Is my loft suitable for a conversion?'           => 'It depends mainly on the head height, the roof structure and where a new staircase can go. We check all three at a free site visit and give you an honest view of what is possible.',
-					'Do I need planning permission for a loft conversion?' => 'Not always. Many loft conversions fall under permitted development, within limits on volume and design. Front dormers, larger roof changes and homes in conservation areas or listed buildings usually need planning permission. We will advise on your home.',
-					'Do I need planning permission to convert my garage?' => 'Many garage conversions do not, but some homes, especially on newer estates, have planning conditions that remove permitted development rights. Building regulations approval is almost always needed. We will check before any work starts.',
-					'Can we stay at home during a loft conversion?'   => 'Usually, yes. Much of the work is carried out from the outside and within the loft itself, and we plan the stage where we open up the new staircase carefully to keep disruption to a minimum.',
-					'How much does a conversion cost?'                => 'It depends on the type of conversion, the structure and the finishes, so we do not give guide prices without seeing your home. After a free site visit we provide a clear, itemised quote with no hidden costs.',
-					'Will a conversion add value to my home?'         => 'A well-built extra bedroom or living space generally makes a home more appealing and more valuable, as long as it is properly approved and finished. We make sure you have the building control completion certificate for when you come to sell.',
+					'Do I need planning permission to convert my garage?' => 'Many garage conversions do not, but some homes, especially on newer estates, have planning conditions that remove permitted development rights. We will check before any work starts.',
+					'Do I need building regulations approval?'          => 'Almost always, yes. Building regulations cover the insulation, ventilation, fire safety and structure of the new room. We arrange the approval and the building control inspections for you.',
+					'Is my garage suitable for a conversion?'           => 'Most are. We look at the walls, floor, foundations and ceiling height at a free site visit and give you an honest view of what is needed.',
+					'Can we stay at home during a garage conversion?'   => 'Yes. Most of the work happens within the garage itself, so disruption to the rest of the house is kept to a minimum.',
+					'How much does a garage conversion cost?'           => 'It depends on the size of the garage, its condition and the finishes you choose, so we do not give guide prices without seeing it. After a free site visit we provide a clear, itemised quote.',
+					'Will a garage conversion add value to my home?'    => 'A well-built extra room generally makes a home more appealing, as long as it is properly approved and finished. We make sure you have the building control completion certificate for when you come to sell.',
 				),
 			),
-			'contact' => array(
-				'heading' => 'Thinking about a conversion?',
-				'text'    => 'Tell us about your loft or garage and what you would like to use it for. Josh or Callum will arrange a free site visit and give you honest advice, with no obligation.',
-				'points'  => array( 'Free site visit and itemised quote', 'Owner-managed from start to finish', 'Planning and building regulations support', 'Trusted, tidy and reliable trades' ),
+			'contact'     => array(
+				'heading' => 'Thinking about a garage conversion?',
+				'text'    => 'Tell us about your garage and what you would like to use it for. Josh or Callum will arrange a free site visit and give you honest advice, with no obligation.',
+				'points'  => array( 'Free site visit and itemised quote', 'Owner-managed from start to finish', 'Planning and building regulations support', 'Trusted, respectful and reliable trades' ),
 				'image'   => 'hallway-stairs',
 			),
 		)
@@ -518,7 +471,7 @@ function dc_demo_service_renovations( $post_id, $m, $shared ) {
 		array(
 			'excerpt' => 'Full house, period and listed property renovations in Chippenham, Corsham and North Wiltshire. Owner-managed, with care for stone, lime and original features.',
 			'hero'    => array(
-				'image'        => 'stone-house',
+				'image'        => 'extension-arches',
 				'eyebrow'      => 'Renovations in Chippenham & North Wiltshire',
 				'heading'      => 'House renovations',
 				'text'         => 'Full house, period and listed property renovations, from stripping back to the final coat of paint, managed from start to finish by Josh and Callum.',
@@ -529,11 +482,11 @@ function dc_demo_service_renovations( $post_id, $m, $shared ) {
 				'heading' => 'Bringing homes back to their best',
 				'body'    => array(
 					'<p>Whether you have bought a house that needs everything doing or want to bring a much-loved home up to date, a renovation is a chance to get it exactly right. Deeprose &amp; Carter Developments carry out <strong>house renovations in Chippenham, Corsham, Calne, Malmesbury, Melksham</strong> and the villages of North Wiltshire, from single rooms to complete homes, inside and out.</p>',
-					'<p>A renovation brings together more trades than almost any other project, and the order they work in matters. Josh or Callum project-manages every renovation personally, so you have one point of contact and a carefully planned programme, rather than a string of separate contractors to coordinate yourself.</p>',
+					'<p>A renovation brings together more trades than almost any other project, and the order they work in matters. Josh and Callum project-manage every renovation personally, so you have one point of contact and a carefully planned programme, rather than a string of separate contractors to coordinate yourself.</p>',
 					'<h2>Full house renovations</h2>',
 					'<p>For a complete renovation we work from the structure outwards: any structural repairs and layout changes first, then rewiring, replumbing and heating, followed by plastering, joinery, kitchens and bathrooms, flooring and decoration. Where it is needed, we also take on the outside, from repointing and drainage to driveways, patios and landscaping, so the whole property is finished to the same standard.</p>',
 					'<h2>Period and listed properties</h2>',
-					'<p>Much of North Wiltshire is built in Bath and Cotswold stone, and older homes need a different approach to modern ones. We use breathable materials such as <strong>lime mortar and lime plaster</strong> where they are right for the building, repair rather than replace original features where we can, and take care to match stone and detailing.</p>',
+					'<p>Much of North Wiltshire is built in Bath and Cotswold stone, and older homes need a different approach to modern ones. We use traditional materials such as <strong>lime mortar and lime plaster</strong> where they are right for the building, repair rather than replace original features where we can, and take care to match stone and detailing.</p>',
 					'<p>Work to a <strong>listed building</strong>, inside or out, usually needs <strong>listed building consent</strong> as well as building regulations approval, and homes in <strong>conservation areas</strong> have extra planning controls. We can work with your architect or heritage consultant and help you through the process.</p>',
 					'<h2>Fire, flood and insurance work</h2>',
 					'<p>After fire or water damage, we can strip out, dry, repair and rebuild the affected rooms, working alongside your insurer or loss adjuster to get your home back to how it was, or better.</p>',
@@ -579,29 +532,19 @@ function dc_demo_service_renovations( $post_id, $m, $shared ) {
 				'heading'  => 'Our renovations',
 				'intro'    => 'A selection of renovations we have completed across North Wiltshire. Click any photo to see it full size.',
 				'captions' => array(
-					'extension-arches' => 'Stone extension, Calne',
+					'kitchen-marble'   => 'Kitchen-diner',
 					'hallway-stairs'   => 'Hallway and oak staircase, Calne',
 					'utility-room'     => 'Utility room, Calne',
-					'kitchen-marble'   => 'Kitchen-diner',
 					'arched-shower'    => 'Arched larder, Calne',
 					'stone-house'      => 'Period stone house',
-				),
-			),
-			'process' => array(
-				'heading' => 'Your renovation, step by step',
-				'steps'   => array(
-					'Site visit'           => 'We look around the whole property, talk through your plans and give honest advice on priorities.',
-					'Survey and approvals' => 'We work with your architect, engineer or heritage adviser and help with building regulations and listed building consent.',
-					'Quote and programme'  => 'An itemised quote and a clear programme showing the order of work, so you know what to expect.',
-					'The build'            => 'Structure first, then services, plastering and finishes, with Josh or Callum overseeing every trade.',
-					'Handover'             => 'Building control sign-off, a final walk-round together and a clean, tidy home.',
+					'garden-terrace'   => 'Stone terrace and oak pergola',
 				),
 			),
 			'faqs'    => array(
 				'eyebrow' => 'Renovation FAQs',
 				'heading' => 'Questions about renovations',
 				'items'   => array(
-					'Do you renovate listed buildings?'               => 'Yes. We work on period and listed homes and understand the need for breathable materials such as lime, careful repairs and matching stone. Most work to a listed building needs listed building consent, and we can help you with it.',
+					'Do you renovate listed buildings?'               => 'Yes. We work on period and listed homes and understand the need for traditional materials such as lime, careful repairs and matching stone. Most work to a listed building needs listed building consent, and we can help you with it.',
 					'Can we live in the house during a renovation?'   => 'It depends on how much of the house is being renovated. Many clients stay at home while we work in stages; for a full renovation with rewiring and replumbing, moving out for part of the work can be quicker and easier. We will talk it through honestly at the start.',
 					'How much does a house renovation cost?'          => 'Every property is different, so we do not give guide prices without seeing it. After a free site visit we provide a clear, itemised quote, so you can see where the money goes and decide on priorities.',
 					'Where should a renovation start?'                => 'With anything structural, damp or roof-related, then the services hidden in the walls and floors, and the finishes last. We plan the order of work so nothing has to be undone later.',
@@ -612,7 +555,7 @@ function dc_demo_service_renovations( $post_id, $m, $shared ) {
 			'contact' => array(
 				'heading' => 'Planning a renovation?',
 				'text'    => 'Tell us about the property and what you would like to achieve. Josh or Callum will arrange a free site visit and give you honest advice, with no obligation.',
-				'points'  => array( 'Free site visit and itemised quote', 'Owner-managed from start to finish', 'Experience with period and listed homes', 'Trusted, tidy and reliable trades' ),
+				'points'  => array( 'Free site visit and itemised quote', 'Owner-managed from start to finish', 'Experience with period and listed homes', 'Trusted, respectful and reliable trades' ),
 				'image'   => 'team-plans',
 			),
 		)
@@ -660,7 +603,7 @@ function dc_demo_service_structural( $post_id, $m, $shared ) {
 					'Steel beams, padstones and columns',
 					'Structural engineer coordination',
 					'Building regulations and building control',
-					'Party wall arrangements',
+					'Advice on party wall agreements',
 					'Temporary propping and support',
 					'New door and window openings',
 					'Widened openings for bifold doors',
@@ -695,19 +638,9 @@ function dc_demo_service_structural( $post_id, $m, $shared ) {
 				'heading'  => 'Our structural work',
 				'intro'    => 'Walls opened up and layouts changed across North Wiltshire. Click any photo to see it full size.',
 				'captions' => array(
-					'team-plans'     => 'Josh and Callum on site',
 					'kitchen-marble' => 'Kitchen-diner',
+					'hallway-stairs' => 'Hallway and oak staircase, Calne',
 					'kitchen-island' => 'Painted kitchen island',
-				),
-			),
-			'process' => array(
-				'heading' => 'Your alterations, step by step',
-				'steps'   => array(
-					'Site visit'           => 'We look at the walls and structure involved and talk through what you want the space to do.',
-					'Engineer and approvals' => 'A structural engineer designs the beams and supports, and we give building control notice.',
-					'Quote and programme'  => 'An itemised quote and a realistic schedule, so you know the cost and timings before we start.',
-					'The work'             => 'Propping, removal, steelwork and inspections, then making good, with Josh or Callum overseeing every stage.',
-					'Handover'             => 'Building control sign-off, a completion certificate and a clean, tidy home.',
 				),
 			),
 			'faqs'    => array(
@@ -725,8 +658,8 @@ function dc_demo_service_structural( $post_id, $m, $shared ) {
 			'contact' => array(
 				'heading' => 'Planning structural changes?',
 				'text'    => 'Tell us about your home and what you would like to change. Josh or Callum will arrange a free site visit and give you honest advice, with no obligation.',
-				'points'  => array( 'Free site visit and itemised quote', 'Owner-managed from start to finish', 'Engineer and building control arranged', 'Trusted, tidy and reliable trades' ),
-				'image'   => 'hallway-stairs',
+				'points'  => array( 'Free site visit and itemised quote', 'Owner-managed from start to finish', 'Engineer and building control arranged', 'Trusted, respectful and reliable trades' ),
+				'image'   => 'extension-glazed',
 			),
 		)
 	);
@@ -789,19 +722,6 @@ function dc_demo_service_groundworks( $post_id, $m, $shared ) {
 					'Areas'       => 'Chippenham & North Wiltshire',
 				),
 			),
-			'options' => array(
-				'eyebrow' => 'Groundworks & landscaping',
-				'heading' => 'What do you need?',
-				'intro'   => 'From the foundations of a new build to a new patio, every job starts with the ground. We will look at your site with you at the visit.',
-				'items'   => array(
-					'Foundations'          => 'Excavation and foundations for extensions, conversions, garden rooms and new builds.',
-					'Drainage'             => 'New drainage, soakaways and land drainage to deal with surface water and wet ground.',
-					'Driveways'            => 'New and replacement driveways in block paving, stone, resin-bound or gravel, laid on a solid base.',
-					'Patios and terraces'  => 'Natural stone, sandstone and porcelain patios with the right falls, edging and pointing.',
-					'Retaining walls'      => 'Walls and terracing that turn a sloping garden into level, usable space.',
-					'Paths and steps'      => 'Garden paths, steps and edging that link the house, patio and garden together.',
-				),
-			),
 			'gallery' => array(
 				'heading'  => 'Our landscaping',
 				'intro'    => 'A selection of groundworks and landscaping we have completed across North Wiltshire. Click any photo to see it full size.',
@@ -839,7 +759,7 @@ function dc_demo_service_groundworks( $post_id, $m, $shared ) {
 			'contact' => array(
 				'heading' => 'Planning groundworks or landscaping?',
 				'text'    => 'Tell us about your site or garden and what you would like to achieve. Josh or Callum will arrange a free site visit and give you honest advice, with no obligation.',
-				'points'  => array( 'Free site visit and itemised quote', 'Owner-managed from start to finish', 'Drainage and levels done properly', 'Trusted, tidy and reliable trades' ),
+				'points'  => array( 'Free site visit and itemised quote', 'Owner-managed from start to finish', 'Drainage and levels done properly', 'Trusted, respectful and reliable trades' ),
 				'image'   => 'garden-steps',
 			),
 		)
@@ -942,7 +862,7 @@ function dc_demo_service_new_builds( $post_id, $m, $shared ) {
 			'contact' => array(
 				'heading' => 'Planning a new build?',
 				'text'    => 'Tell us about your plot and your plans. Josh or Callum will arrange a free site visit and give you honest advice, with no obligation.',
-				'points'  => array( 'Free site visit and itemised quote', 'Owner-managed from start to finish', 'Groundworks to handover by one team', 'Trusted, tidy and reliable trades' ),
+				'points'  => array( 'Free site visit and itemised quote', 'Owner-managed from start to finish', 'Groundworks to handover by one team', 'Trusted, respectful and reliable trades' ),
 				'image'   => 'team-plans',
 			),
 		)

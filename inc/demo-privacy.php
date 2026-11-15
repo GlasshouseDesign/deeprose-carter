@@ -11,10 +11,10 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Create or update the privacy policy page and set it as the site's privacy page.
  *
+ * @param string $email Contact address for privacy questions.
  * @return int Page ID.
  */
-function dc_demo_privacy_policy() {
-	$email   = 'jo@jdeeprosedevelopments.co.uk';
+function dc_demo_privacy_policy( $email ) {
 	$mailto  = '<a href="mailto:' . esc_attr( $email ) . '">' . esc_html( $email ) . '</a>';
 	$content = implode(
 		"\n",

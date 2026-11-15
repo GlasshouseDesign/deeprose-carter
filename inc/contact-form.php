@@ -39,6 +39,16 @@ function dc_cf_timings() {
 }
 
 /**
+ * Planning questions: label => choices.
+ */
+function dc_cf_planning() {
+	return array(
+		'planning_needed'  => array( __( 'Do you need planning permission?', 'deeprose-carter' ), array( __( 'Yes', 'deeprose-carter' ), __( 'No', 'deeprose-carter' ), __( 'Not sure', 'deeprose-carter' ) ) ),
+		'planning_granted' => array( __( 'Have you got planning permission?', 'deeprose-carter' ), array( __( 'Yes', 'deeprose-carter' ), __( 'No', 'deeprose-carter' ) ) ),
+	);
+}
+
+/**
  * Form state passed back after a failed submission: errors and the values entered.
  */
 function dc_cf_state() {
@@ -133,6 +143,17 @@ function dc_cf_render() {
 				</select>
 			</div>
 		</div>
+		<div class="cf-row">
+			<?php foreach ( dc_cf_planning() as $dc_k => $dc_q ) : ?>
+				<div class="cf-field">
+					<label for="cf-<?php echo esc_attr( $dc_k ); ?>"><?php echo esc_html( $dc_q[0] ); ?></label>
+					<select id="cf-<?php echo esc_attr( $dc_k ); ?>" name="<?php echo esc_attr( $dc_k ); ?>">
+						<option value=""><?php esc_html_e( 'Please choose', 'deeprose-carter' ); ?></option>
+						<?php foreach ( $dc_q[1] as $dc_o ) : ?><option<?php selected( $val( $dc_k ), $dc_o ); ?>><?php echo esc_html( $dc_o ); ?></option><?php endforeach; ?>
+					</select>
+				</div>
+			<?php endforeach; ?>
+		</div>
 		<div class="cf-field">
 			<label for="cf-message"><?php esc_html_e( 'Tell us about your project', 'deeprose-carter' ); ?> <abbr title="required">*</abbr></label>
 			<textarea id="cf-message" name="message" rows="6" required placeholder="<?php esc_attr_e( 'What you would like to do, the size of the space and whether you have plans or planning permission yet.', 'deeprose-carter' ); ?>"<?php echo $aria( 'message' ); // phpcs:ignore ?>><?php echo esc_textarea( $val( 'message' ) ); ?></textarea>
@@ -176,7 +197,7 @@ function dc_cf_render() {
 function dc_cf_handle() {
 	$page   = isset( $_POST['dc_page'] ) ? absint( $_POST['dc_page'] ) : 0; // phpcs:ignore WordPress.Security.NonceVerification
 	$back   = $page ? get_permalink( $page ) : home_url( '/contact/' );
-	$fields = array( 'name', 'email', 'phone', 'postcode', 'project_type', 'timing', 'message', 'consent' );
+	$fields = array( 'name', 'email', 'phone', 'postcode', 'project_type', 'timing', 'planning_needed', 'planning_granted', 'message', 'consent' );
 	$values = array();
 	foreach ( $fields as $f ) {
 		$raw          = isset( $_POST[ $f ] ) ? wp_unslash( $_POST[ $f ] ) : ''; // phpcs:ignore WordPress.Security.NonceVerification, WordPress.Security.ValidatedSanitizedInput
@@ -230,6 +251,8 @@ function dc_cf_handle() {
 		__( 'Postcode', 'deeprose-carter' ) => $values['postcode'],
 		__( 'Project', 'deeprose-carter' )  => $values['project_type'],
 		__( 'Start', 'deeprose-carter' )    => $values['timing'],
+		__( 'Planning needed', 'deeprose-carter' ) => $values['planning_needed'],
+		__( 'Planning granted', 'deeprose-carter' ) => $values['planning_granted'],
 	);
 	$body = '';
 	foreach ( $rows as $label => $value ) {

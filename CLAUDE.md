@@ -31,7 +31,7 @@ Section order on the homepage:
 3. Scrolling services banner (navy)
 4. Services grid
 5. Featured projects (navy)
-6. Client testimonial (Joe Davies)
+6. Client testimonial (Joe, Corsham)
 7. Team
 8. How we work (navy)
 9. Detail gallery
@@ -43,7 +43,7 @@ Section order on the homepage:
 Changes the client has asked for, which are already done:
 - The header has no Contact link or phone number, just Reviews and the "Request a quote" button.
 - The FAQs and How we work buttons say "Contact us".
-- The quote email is jo@jdeeprosedevelopments.co.uk (Site Settings → Quote email).
+- The public and quote email is info@deeproseandcarter.co.uk (Site Settings → Email and Quote email), also used in the privacy policy. The phone number is still to be confirmed.
 - The scrolling services banner was added above Services.
 - The name tiles in the Team section were removed.
 - The hero card is a little smaller (552px wide, 46px headline), so more of the film shows.
@@ -55,6 +55,8 @@ Changes the client has asked for, which are already done:
 - Company number 12007910 is in Site Settings (footer text).
 - Three new orangery-style extension photos (`demo/img/orangery-*.jpg`) are in the Extensions gallery.
 - The footer credit reads "Website by glasshouse.design", linking to https://glasshouse.design. It is set in `footer.php`, not in Site Settings.
+- Client revisions of 15 November: the review is credited to "Joe, Corsham"; Loft conversions are dropped, so the service is Garage Conversions only; the Extensions page has no options grid or step by step, no "we have" or "help with the paperwork", and offers advice on party wall agreements; the step-by-step sections are gone from Extensions, Kitchens, Conversions, Renovations and Structural (Groundworks and New Builds keep theirs); Groundworks has no "What do you need?" grid; Renovations says "traditional materials" (used site-wide instead of "breathable") and has the Calne extension as its hero; contact panels say "Trusted, respectful and reliable trades"; the Structural gallery no longer shows Josh and Callum, pending photos of the Corsham structural job; the quote form asks "Do you need planning permission?" (Yes, No, Not sure) and "Have you got planning permission?" (Yes, No).
+- Gravity Forms styling: its own stylesheet fixes controls at 38px high, which clipped the dropdown text to dots; `main.css` overrides it, along with the consent text, upload area and accent colour.
 - A second review, from Jon & Amy Ladd (garage conversion), is on the Conversions page. A service can replace the shared review with its own `testimonial` key.
 - The homepage FAQ answers are written, using details already confirmed (£10M cover, free quotes, no timescales).
 - Privacy policy written for UK GDPR (`inc/demo-privacy.php`), set as the WordPress privacy page by the D&C setup.
@@ -104,4 +106,5 @@ Changes the client has asked for, which are already done:
 ## Open questions for the client
 
 - **"Callum" or "Calum"?** The review says Calum. Use one spelling everywhere once confirmed.
-- **Email address:** is jo@jdeeprosedevelopments.co.uk staying, or moving to a new domain?
+- **Phone number:** to be confirmed.
+- **Photos:** the Corsham structural job (for the Structural page and a new project), and the garage conversion (for the Conversions page, which uses the team photo until then).

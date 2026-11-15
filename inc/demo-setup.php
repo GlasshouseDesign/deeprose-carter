@@ -197,7 +197,7 @@ function dc_demo_run() {
 	$services_data = array(
 		array( 'extensions', 'Extensions', 'Single storey, two storey and wrap-around extensions.', 'extension-bifold', 'Single storey, full height and wrap-around extensions, project-managed from start to finish.' ),
 		array( 'kitchens', 'Kitchens', 'Refurbishments, kitchen extensions and open-plan knock-throughs.', 'kitchen-marble', 'Kitchen refurbishments, kitchen extensions and open-plan knock-throughs.' ),
-		array( 'conversions', 'Loft & Garage Conversions', 'Turn unused space into bedrooms, offices and living space.', '', 'Garage and loft conversions that turn unused space into bedrooms, offices and living space.' ),
+		array( 'conversions', 'Garage Conversions', 'Turn an unused garage into an office, playroom, gym or bedroom.', '', 'Garage conversions that turn unused space into offices, playrooms, gyms and bedrooms.' ),
 		array( 'renovations', 'Renovations', 'Full house, period and listed property renovations.', 'stone-house', 'Period properties, listed buildings, fire damage, open-plan living and full house renovations.' ),
 		array( 'structural', 'Structural Alterations', 'Wall removals, new openings, layout changes and insurance work.', 'kitchen-open-plan', 'Wall openings, open-plan living, new openings, complete layout changes, structural alterations and insurance work.' ),
 		array( 'groundworks', 'Groundworks & Landscaping', 'Site clearance, drainage, foundations, driveways and patios.', 'garden-steps', 'Site clearance and excavation, drainage, retaining walls, driveways, patios and paths, and foundations for extensions and conversions.' ),
@@ -266,8 +266,8 @@ function dc_demo_run() {
 		'eyebrow'       => 'Client story',
 		'pull_quote'    => 'Exceptional workmanship, thoughtful advice and a team that genuinely cares about getting things right.',
 		'body'          => "<p>Josh, Calum and the team transformed four rooms in our very old house into one large kitchen-diner, dealing with different floor levels, structural challenges and the removal of a staircase along the way.</p>\n<p>They were knowledgeable, professional and incredibly thorough, taking the time to understand the existing building and even identifying an important change needed to the structural plans once the roof was exposed.</p>\n<p>The quality of the craftsmanship was outstanding, from rebuilding stone pillars and lime plastering to incorporating the original chimneys beautifully into the finished design.</p>\n<p>They were reliable, consultative and always willing to go the extra mile to keep the project on track. We couldn't be happier with the result and are already looking forward to working with them again. Highly recommended.</p>",
-		'name'          => 'Joe Davies',
-		'project'       => 'Kitchen-diner renovation',
+		'name'          => 'Joe',
+		'project'       => 'Corsham',
 		'link'          => dc_demo_link( 'https://www.facebook.com/JDeeprosedevelopmentsltd', 'Read more reviews', '_blank' ),
 	);
 
@@ -303,7 +303,7 @@ function dc_demo_run() {
 		),
 		array(
 			'acf_fc_layout' => 'ticker',
-			'items'         => array_map( fn( $t ) => array( 'text' => $t ), array( 'Extensions', 'Kitchens', 'Loft & garage conversions', 'Renovations', 'Structural work', 'Groundworks & landscaping', 'New builds' ) ),
+			'items'         => array_map( fn( $t ) => array( 'text' => $t ), array( 'Extensions', 'Kitchens', 'Garage conversions', 'Renovations', 'Structural work', 'Groundworks & landscaping', 'New builds' ) ),
 		),
 		array(
 			'acf_fc_layout' => 'services_grid',
@@ -327,8 +327,8 @@ function dc_demo_run() {
 			'eyebrow'       => 'Client story',
 			'pull_quote'    => 'Exceptional workmanship, thoughtful advice and a team that genuinely cares about getting things right.',
 			'body'          => "<p>Josh, Calum and the team transformed four rooms in our very old house into one large kitchen-diner, dealing with different floor levels, structural challenges and the removal of a staircase along the way.</p>\n<p>They were knowledgeable, professional and incredibly thorough, taking the time to understand the existing building and even identifying an important change needed to the structural plans once the roof was exposed.</p>\n<p>The quality of the craftsmanship was outstanding, from rebuilding stone pillars and lime plastering to incorporating the original chimneys beautifully into the finished design.</p>\n<p>They were reliable, consultative and always willing to go the extra mile to keep the project on track. We couldn't be happier with the result and are already looking forward to working with them again. Highly recommended.</p>",
-			'name'          => 'Joe Davies',
-			'project'       => 'Kitchen-diner renovation',
+			'name'          => 'Joe',
+			'project'       => 'Corsham',
 			'link'          => dc_demo_link( 'https://www.facebook.com/JDeeprosedevelopmentsltd', 'Read more reviews', '_blank' ),
 		),
 		$team_row,
@@ -411,8 +411,8 @@ function dc_demo_run() {
 		$about
 	);
 	// Quote form: built in Gravity Forms when it is active, otherwise the theme's own form is used.
-	$quote_email = 'jo@jdeeprosedevelopments.co.uk';
-	dc_demo_privacy_policy();
+	$quote_email = 'info@deeproseandcarter.co.uk';
+	dc_demo_privacy_policy( $quote_email );
 	$gf_form = dc_gf_quote_form( $quote_email );
 	$log[]   = $gf_form ? 'Gravity Forms quote form built and added to the Contact page.' : 'Gravity Forms is not active, so the Contact page uses the built-in quote form.';
 
@@ -494,7 +494,7 @@ function dc_demo_run() {
 	$settings = array(
 		'field_dc_set_phone'          => '01249 000 000',
 		'field_dc_set_quote_email'    => $quote_email,
-		'field_dc_set_email'          => 'jo@jdeeprosedevelopments.co.uk',
+		'field_dc_set_email'          => $quote_email,
 		'field_dc_set_whatsapp'       => '',
 		'field_dc_set_address'        => 'Chippenham, Wiltshire',
 		'field_dc_set_header_button'  => $quote_btn,
@@ -510,7 +510,7 @@ function dc_demo_run() {
 	$log[] = 'Site Settings filled in (the phone number is a placeholder).';
 
 	// Menus.
-	$privacy = dc_demo_privacy_policy();
+	$privacy = dc_demo_privacy_policy( $quote_email );
 	dc_demo_menu_build( 'Header left', 'primary-left', array(
 		array( 'title' => 'Services', 'archive' => 'service' ),
 		array( 'title' => 'Projects', 'archive' => 'project' ),
